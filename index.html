@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ambrosi!</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" href="css/kube.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/custom.min.css" />
+	<link rel="shortcut icon" href="img/favicon.png" />
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link href="css/jquery.barCharts.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.barChart.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	    crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	    crossorigin="anonymous"></script>
+	<script src="js/imgLiquid.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="js/typed.min.js"></script>
+	<script src="js/kube.min.js"></script>
+	<script src="js/site.js"></script>
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link href="chart/jquery.lineProgressbar.css" rel="stylesheet" type="text/css">
+	<script src="chart/jquery.lineProgressbar.js"></script>
+	<script src="js/imgLiquid.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".imgLiquidFill").imgLiquid({
+				fill: true,
+				horizontalAlign: "center",
+				verticalAlign: "top"
+			});
+		});
+
+
+
+		$('#js').LineProgressbar({
+			percentage: 95,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+
+		});
+		$('#jq').LineProgressbar({
+			percentage: 75,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+
+		});
+		$('#html').LineProgressbar({
+			percentage: 90,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+		});
+		$('#css').LineProgressbar({
+			percentage: 50,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+		});
+
+		$('#mysql').LineProgressbar({
+			percentage: 95,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+		});
+		$('#mongo').LineProgressbar({
+			percentage: 50,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+		});
+
+		$('#animate').LineProgressbar({
+			percentage: 95,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+		});
+
+		$('#illustrator').LineProgressbar({
+			percentage: 55,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+		});
+		$('#photoshop').LineProgressbar({
+			percentage: 70,
+			radius: '3px',
+			height: '5px',
+			fillBackgroundColor: '#000'
+		});
+
+
+		function newTyped() {}
+		$(function () {
+			$("#typed").typed({
+				// Change to edit type effect
+				strings: ["Adobe Animate CC", "PHP", "MySQL", "jQuery", "HTML5", ""],
+
+				typeSpeed: 90,
+				backDelay: 700,
+				contentType: "html",
+				loop: !0,
+				resetCallback: function () {
+					newTyped()
+				}
+			}), $(".reset").click(function () {
+				$("#typed").typed("reset")
+			})
+		});
+	</script>
+	<style>
+
+		.container {
+			width: 800px;
+		}
+
+		.imgLiquidFill {
+			-webkit-filter: grayscale(1);
+			display: inline-block;
+			margin-left: 15px;
+			margin-top: 15px;
+			border: 1px solid #000000;
+
+		}
+
+		.imgLiquidFill:hover {
+			-webkit-filter: grayscale(0%) !important;
+			;
+			/* Safari 6.0 - 9.0 */
+			filter: grayscale(0%) !important;
+			;
+		}
+
+		h1,
+		h2 {
+			font-family: Raleway !important;
+		}
+
+		h2 {
+			font-size: 22px;
+		}
+
+		p {
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		@font-face {
+			font-family: "Raleway";
+			src: url("fonts/Raleway-Medium.ttf");
+		}
+
+		td {
+			width: 50%;
+			min-width: 100px;
+		}
+
+		.intro h1:before {
+			content: 'AMBROSI';
+			font-size: 200px;
+		}
+	</style>
+
+	<script>
+		function mudaAniModal(num) {
+
+			$('#conteudoModal').html(
+				"<iframe frameborder=\"0\" style=\"overflow: hidden; display: block;\" class=\"loadMidiaAni  \" src=ani/" +
+				num + "></iframe>");
+		}
+
+		$("#myModal").on("hide.bs.myModal", function () {
+			$('#conteudoModal').html('');
+});
+	</script>
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+					<span class="logo">PAULO AMBROSI</span>
+				</div>
+				<nav id="navbar-1" class="navbar item-nav">
+					<ul>
+						<li class="active">
+							<a href="#about">SOBRE</a>
+						</li>
+						<li>
+							<a href="#skills">HABILIDADES</a>
+						</li>
+						<li>
+							<a href="#experiencias">EXPERIENCIAS</a>
+						</li>
+						<li>
+							<a href="#produtos">PRODUTOS</a>
+						</li>
+
+
+
+
+					</ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+
+	<!-- Introduction -->
+	<div class="intro section" id="about">
+		<div class="container">
+			<div class="units-row units-split wrap">
+				<div class="unit-20">
+					<img src="img/ava.jpg" alt="Avatar">
+				</div>
+				<div class="unit-80">
+					<h1>Programador
+						<br>
+						<span id="typed"></span>
+					</h1>
+				</div>
+				<p>
+					Paulo Ambrosi.
+					<br> Soteropolitano, programador desde 2012, animador 2D desde 2014.
+					<br>
+
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Technical Skills -->
+	<div class="skills section second" id="skills">
+		<div class="container">
+			<h1>Habilidades</h1>
+			<ul class="skill-list list-flat">
+				<li>
+					<h2>Desenvolvimento Web</h2>
+				</li>
+
+				Javascript
+				<div id="js"></div>
+				HTML5
+				<div id="html"></div>
+				JQUERY
+				<div id="jq"></div>
+				CSS/CSS3
+				<div id="css"></div>
+			</ul>
+			<ul class="skill-list list-flat">
+				<li>
+					<h2>Banco de dados</h2>
+				</li>
+				MySQL
+				<div id="mysql"></div>
+				MongoDB
+				<div id="mongo"></div>
+
+			</ul>
+
+			<ul class="skill-list list-flat">
+				<li>
+					<h2>Ferramentas</h2>
+				</li>
+				Adobe Animate CC
+				<div id="animate"></div>
+				Adobe Photoshop
+				<div id="photoshop"></div>
+				Adobe Illustrator
+				<div id="illustrator"></div>
+
+			</ul>
+
+		</div>
+	</div>
+
+	<!-- Work Experience -->
+	<div class="work section second" id="experiencias">
+		<div class="container">
+			<h1>Experiências
+				<br>Profissionais</h1>
+			<ul class="work-list">
+				<li>2013-2015</li>
+				<li>
+					<a>SENAI Bahia</a>
+				</li>
+				<li>Desenvolvimento Web</li>
+			</ul>
+			<ul class="work-list">
+				<li>2015-</li>
+				<li>
+					<a>SENAI Bahia</a>
+				</li>
+				<li>Desenvolvimento Web / Animações 2D para Educação a Distância.</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<!-- Award & produtos -->
+	<div class="award section second" id="produtos">
+		<div class="container">
+			<h1>produtos</h1>
+			<p>
+
+				<div id="inside-produtos" style="max-width:100%; display:block">
+
+					<div class="imgLiquidFill imgLiquid rounded" style="width:200px; height:200px;" data-toggle="modal" data-target="#myModal"
+					    onclick="javascript:mudaAniModal(1)">
+						<img src="img/ani1.png" />
+					</div>
+					<div class="imgLiquidFill imgLiquid rounded" style="width:200px; height:200px;" data-toggle="modal" data-target="#myModal"
+					    onclick="javascript:mudaAniModal(2)">
+						<img src="img/ani2.png" />
+					</div>
+					<div class="imgLiquidFill imgLiquid rounded" style="width:200px; height:200px;" data-toggle="modal" data-target="#myModal"
+					    onclick="javascript:mudaAniModal(3)">
+						<img src="img/ani3.png" />
+					</div>
+					<div class="imgLiquidFill imgLiquid rounded" style="width:200px; height:200px;" data-toggle="modal" data-target="#myModal"
+					    onclick="javascript:mudaAniModal(4)">
+						<img src="img/ani4.png" />
+					</div>
+					<div class="imgLiquidFill imgLiquid rounded" style="width:200px; height:200px;" data-toggle="modal" data-target="#myModal"
+					    onclick="javascript:mudaAniModal(5)">
+						<img src="img/ani5.png" />
+					</div>
+
+				</div>
+				<!-- Button to Open the Modal -->
+				javascript:$('#conteudoModal').html('')
+
+				<!-- The Modal -->
+				<div class="modal fade" id="myModal">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content" role="document">
+							<style>
+								
+								iframe {
+
+									width: 700px !important;
+									height: 525px !important;
+								}
+
+							</style>
+
+							<!-- Modal Header -->
+							<div class="modal-header">
+								<h4 class="modal-title"></h4>
+								<button type="button" class="close" onclick="" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="midiasAnimacao">
+								<center>
+									<!-- Modal body -->
+									<div class="modal-body" id="conteudoModal">
+
+									</div>
+								</center>
+								<!-- Modal footer -->
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</p>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="container">
+			<div class="units-row">
+				<div class="unit-50">
+					<p></p>
+				</div>
+				<div class="unit-50">
+					<ul class="social list-flat right">
+						<li>
+							<a href="mailto:ambrosipaulo@gmail.com">
+								<i class="fa fa-envelope"></i>
+							</a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+
+	
+</body>
+
+</html>
