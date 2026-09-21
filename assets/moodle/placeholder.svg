@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="ph-t">
+  <title id="ph-t">Espaço reservado para captura de tela</title>
+  <rect width="800" height="500" fill="#EDEAE1"/>
+  <rect x="0" y="0" width="800" height="52" fill="#DFDACB"/>
+  <circle cx="30" cy="26" r="6" fill="#B05023"/>
+  <circle cx="52" cy="26" r="6" fill="#BDB6A3"/>
+  <circle cx="74" cy="26" r="6" fill="#BDB6A3"/>
+  <rect x="100" y="19" width="200" height="14" rx="7" fill="#CFC8B6"/>
+  <rect x="48" y="96" width="330" height="20" rx="6" fill="#CFC8B6"/>
+  <rect x="48" y="136" width="500" height="12" rx="6" fill="#DBD5C6"/>
+  <rect x="48" y="160" width="440" height="12" rx="6" fill="#DBD5C6"/>
+  <rect x="48" y="212" width="220" height="110" rx="8" fill="#E4DFD2"/>
+  <rect x="290" y="212" width="220" height="110" rx="8" fill="#E4DFD2"/>
+  <rect x="532" y="212" width="220" height="110" rx="8" fill="#E4DFD2"/>
+  <g transform="translate(400 400)">
+    <rect x="-132" y="-22" width="264" height="44" rx="22" fill="none" stroke="#B05023" stroke-width="2" stroke-dasharray="7 6"/>
+    <text x="0" y="6" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#B05023">captura pendente</text>
+  </g>
+</svg>

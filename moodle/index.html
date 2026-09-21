@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moodle: administração, plugins e AVAs | Paulo Ambrosi</title>
+<meta name="description" content="Moodle de ponta a ponta: administração, plugins, temas, integrações, SCORM, relatórios e migração de versão em AVAs para CNPq/IILP-CPLP, OEI e UFRGS.">
+<meta name="author" content="Paulo Ambrosi">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#4F5D3F" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161A14" media="(prefers-color-scheme: dark)">
+
+<link rel="canonical" href="https://paulo.ambrosi.top/moodle/">
+<link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/moodle/">
+<link rel="alternate" hreflang="en" href="https://paulo.ambrosi.top/en/moodle/">
+<link rel="alternate" hreflang="x-default" href="https://paulo.ambrosi.top/moodle/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Paulo Ambrosi">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Moodle: administração, plugins e ambientes virtuais de aprendizagem">
+<meta property="og:description" content="Administração, plugins, temas, integrações, SCORM, relatórios e migração de versão em AVAs para instituições nacionais e internacionais.">
+<meta property="og:url" content="https://paulo.ambrosi.top/moodle/">
+<meta property="og:image" content="https://paulo.ambrosi.top/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Trabalho com Moodle — Paulo Ambrosi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Moodle: administração, plugins e AVAs">
+<meta name="twitter:description" content="Administração, plugins, temas, integrações, SCORM, relatórios e migração de versão do Moodle.">
+<meta name="twitter:image" content="https://paulo.ambrosi.top/assets/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../css/styles.css">
+<script>document.documentElement.classList.remove('no-js');try{var t=localStorage.getItem('pa-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">PA</span>
+      <span>Paulo Ambrosi</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Seções do site">
+      <a class="nav__link" href="../index.html#sobre">Sobre</a>
+      <a class="nav__link" href="../index.html#habilidades">Habilidades</a>
+      <a class="nav__link" href="../index.html#projetos">Projetos</a>
+      <a class="nav__link" href="../flow/index.html">FLOW</a>
+      <a class="nav__link" href="../index.html#contato">Contato</a>
+    </nav>
+
+    <div class="header__tools">
+      <div class="langswitch">
+        <a href="index.html" aria-current="page" hreflang="pt-BR" lang="pt-BR">PT</a>
+        <a href="../en/moodle/index.html" hreflang="en" lang="en">EN</a>
+      </div>
+      <button class="iconbtn" id="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="iconbtn navtoggle" id="nav-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Você está aqui">
+        <a href="../index.html">Início</a>
+        <span aria-hidden="true">/</span>
+        <a href="../index.html#projetos">Projetos</a>
+        <span aria-hidden="true">/</span>
+        <span>Moodle</span>
+      </nav>
+      <p class="eyebrow">Especialidade</p>
+      <h1>Moodle, de ponta a ponta</h1>
+      <p class="pagehead__sub">Administração, customização e evolução de plataformas Moodle — e a construção de ambientes virtuais de aprendizagem para instituições nacionais e internacionais.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="article">
+        <div class="article__body">
+
+          <h2 id="escopo">O que eu faço em Moodle</h2>
+          <p>Trabalho com a plataforma em todas as frentes, do servidor à experiência de quem usa o curso:</p>
+          <ul>
+            <li><strong>Administração</strong> — instalação, configuração, papéis e permissões, manutenção do ambiente.</li>
+            <li><strong>Plugins</strong> — instalação, configuração e desenvolvimento de plugins para necessidades específicas.</li>
+            <li><strong>Temas</strong> — customização visual e de navegação para a identidade de cada instituição.</li>
+            <li><strong>Integrações</strong> — conexão com sistemas externos via APIs REST.</li>
+            <li><strong>SCORM</strong> — empacotamento e publicação de conteúdo interativo dentro dos cursos.</li>
+            <li><strong>Relatórios</strong> — extração e organização de dados de acompanhamento dos participantes.</li>
+            <li><strong>Migração de versão</strong> — atualização de instâncias preservando conteúdo, dados e customizações.</li>
+          </ul>
+
+          <div class="callout callout--accent" data-reveal>
+            <p>Muito desse trabalho é feito em ambientes de instituições públicas e de redes internacionais, onde a plataforma precisa aguentar turmas reais e manter os dados dos participantes íntegros ao longo de várias edições de um curso.</p>
+          </div>
+
+          <h2 id="ambientes">Ambientes construídos</h2>
+
+          <h3 id="obsple">ObsPLE-PL2 — Observatório de Português como Língua Estrangeira / Segunda Língua</h3>
+          <p>Ambiente Virtual de Aprendizagem desenvolvido para uma rede internacional vinculada ao <strong>CNPq</strong> e ao <strong>IILP/CPLP</strong>. O projeto envolveu a personalização da plataforma Moodle, a diagramação dos conteúdos educacionais e a implementação de melhorias na navegação, na organização das informações e na experiência de aprendizagem. Foi utilizado em <strong>três edições do curso</strong>, com cerca de <strong>750 usuários</strong>.</p>
+          <dl class="keyvals" data-reveal>
+            <div class="keyval"><dt>Instituições</dt><dd>CNPq · IILP / CPLP</dd></div>
+            <div class="keyval"><dt>Usuários</dt><dd>~750</dd></div>
+            <div class="keyval"><dt>Edições</dt><dd>3</dd></div>
+            <div class="keyval"><dt>Stack</dt><dd>Moodle, PHP, HTML, CSS, JavaScript</dd></div>
+          </dl>
+
+          <h3 id="reintegro">Projeto (Re)Integro — Ministério da Justiça / OEI</h3>
+          <p>Ambiente Virtual de Aprendizagem desenvolvido para apoiar ações de formação e reintegração social promovidas pelo <strong>Ministério da Justiça</strong> e pela <strong>OEI</strong>. O projeto contemplou a construção e configuração da plataforma Moodle, a organização do ambiente educacional e a implementação de recursos que garantiram uma experiência de aprendizagem estruturada e acessível aos participantes.</p>
+
+          <h3 id="fronteiras">Cruzando Fronteiras — UFRGS / OEI</h3>
+          <p>Ambiente Virtual de Aprendizagem desenvolvido para o projeto Cruzando Fronteiras, realizado em parceria com a <strong>Universidade Federal do Rio Grande do Sul</strong>. O trabalho envolveu a construção, a customização e a configuração da plataforma Moodle, criando uma estrutura digital organizada para a oferta de cursos, atividades educacionais e acompanhamento dos participantes.</p>
+
+          <h2 id="telas">Telas</h2>
+          <p><span class="pending-note">capturas pendentes</span></p>
+          <p>Os ambientes são de acesso restrito. As capturas abaixo serão substituídas por telas reais, priorizando visões administrativas e de estrutura de curso, sem dados pessoais de participantes.</p>
+
+          <div class="gallery" data-reveal>
+            <figure class="shot shot--pending">
+              <img src="../assets/moodle/placeholder.svg" width="800" height="500" alt="Espaço reservado para a captura da página inicial de um curso no Moodle" loading="lazy" data-shot="curso">
+              <figcaption>Página inicial de curso — estrutura de tópicos e recursos</figcaption>
+            </figure>
+            <figure class="shot shot--pending">
+              <img src="../assets/moodle/placeholder.svg" width="800" height="500" alt="Espaço reservado para a captura do painel de administração do Moodle" loading="lazy" data-shot="admin">
+              <figcaption>Painel de administração — configuração do ambiente</figcaption>
+            </figure>
+            <figure class="shot shot--pending">
+              <img src="../assets/moodle/placeholder.svg" width="800" height="500" alt="Espaço reservado para a captura de um relatório de acompanhamento no Moodle" loading="lazy" data-shot="relatorio">
+              <figcaption>Relatórios — acompanhamento de progresso</figcaption>
+            </figure>
+            <figure class="shot shot--pending">
+              <img src="../assets/moodle/placeholder.svg" width="800" height="500" alt="Espaço reservado para a captura de um tema customizado do Moodle" loading="lazy" data-shot="tema">
+              <figcaption>Tema customizado — identidade visual da instituição</figcaption>
+            </figure>
+          </div>
+
+          <h2 id="relacionado">Relacionado</h2>
+          <p>A produção do conteúdo que alimenta esses ambientes é organizada no FLOW, o sistema de autoria do SENAI Bahia.</p>
+          <p>
+            <a class="btn btn--primary" href="../flow/index.html">Ver o case do FLOW
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </p>
+        </div>
+
+        <aside class="toc" aria-label="Nesta página">
+          <p class="toc__title">Nesta página</p>
+          <ol>
+            <li><a href="#escopo">O que eu faço em Moodle</a></li>
+            <li><a href="#ambientes">Ambientes construídos</a></li>
+            <li><a href="#obsple">ObsPLE-PL2</a></li>
+            <li><a href="#reintegro">(Re)Integro</a></li>
+            <li><a href="#fronteiras">Cruzando Fronteiras</a></li>
+            <li><a href="#telas">Telas</a></li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>© <span id="year">2026</span> Paulo Ambrosi · Salvador, BA</p>
+    <nav class="footer__links" aria-label="Links do rodapé">
+      <a href="../index.html">Início</a>
+      <a href="../flow/index.html">FLOW</a>
+      <a href="../en/moodle/index.html" hreflang="en" lang="en">English</a>
+      <a href="mailto:ambrosipaulo@gmail.com">E-mail</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Ambientes Virtuais de Aprendizagem em Moodle",
+  "url": "https://paulo.ambrosi.top/moodle/",
+  "inLanguage": "pt-BR",
+  "description": "Administração, customização e evolução de plataformas Moodle: plugins, temas, integrações, SCORM, relatórios e migração de versão, em ambientes para CNPq/IILP-CPLP, Ministério da Justiça/OEI e UFRGS.",
+  "creator": { "@type": "Person", "name": "Paulo Ambrosi", "url": "https://paulo.ambrosi.top/" },
+  "keywords": ["Moodle", "LMS", "SCORM", "EAD", "ambiente virtual de aprendizagem", "PHP"],
+  "isPartOf": { "@type": "WebSite", "url": "https://paulo.ambrosi.top/" }
+}
+</script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>

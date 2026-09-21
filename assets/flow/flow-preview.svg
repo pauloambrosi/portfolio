@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="flowdiag-t">
+  <title id="flowdiag-t">Fluxo de autoria do FLOW: rascunho, revisão, validação e publicação</title>
+  <defs>
+    <marker id="fp-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#FFC299"/>
+    </marker>
+  </defs>
+
+  <rect width="640" height="420" rx="10" fill="rgba(0,0,0,0.16)"/>
+
+  <!-- janela -->
+  <rect x="28" y="28" width="584" height="364" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.20)"/>
+  <line x1="28" y1="66" x2="612" y2="66" stroke="rgba(255,255,255,0.20)"/>
+  <circle cx="52" cy="47" r="5" fill="#FFC299"/>
+  <circle cx="70" cy="47" r="5" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="88" cy="47" r="5" fill="rgba(255,255,255,0.20)"/>
+  <rect x="112" y="40" width="150" height="14" rx="7" fill="rgba(255,255,255,0.14)"/>
+
+  <!-- trilha do fluxo -->
+  <line x1="92" y1="140" x2="548" y2="140" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-dasharray="5 7"/>
+
+  <g font-family="ui-monospace, monospace" font-size="13" fill="#FFFFFF" text-anchor="middle">
+    <g>
+      <circle cx="92" cy="140" r="21" fill="#FFC299"/>
+      <text x="92" y="145" fill="#2C3623" font-weight="700">1</text>
+      <text x="92" y="186" font-size="12" fill="rgba(255,255,255,0.88)">Autoria</text>
+    </g>
+    <g>
+      <circle cx="244" cy="140" r="21" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.4)"/>
+      <text x="244" y="145">2</text>
+      <text x="244" y="186" font-size="12" fill="rgba(255,255,255,0.88)">Revisão</text>
+    </g>
+    <g>
+      <circle cx="396" cy="140" r="21" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.4)"/>
+      <text x="396" y="145">3</text>
+      <text x="396" y="186" font-size="12" fill="rgba(255,255,255,0.88)">Validação</text>
+    </g>
+    <g>
+      <circle cx="548" cy="140" r="21" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.4)"/>
+      <text x="548" y="145">4</text>
+      <text x="548" y="186" font-size="12" fill="rgba(255,255,255,0.88)">Publicação</text>
+    </g>
+  </g>
+
+  <!-- painel de versões -->
+  <rect x="60" y="222" width="256" height="136" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+  <text x="78" y="248" font-family="ui-monospace, monospace" font-size="11" fill="#FFC299" letter-spacing="1.4">VERSÕES</text>
+  <g fill="rgba(255,255,255,0.75)" font-family="ui-monospace, monospace" font-size="11">
+    <rect x="78" y="262" width="8" height="8" rx="4" fill="#FFC299"/>
+    <text x="96" y="271">v3 · em revisão</text>
+    <rect x="78" y="288" width="8" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+    <text x="96" y="297">v2 · validada</text>
+    <rect x="78" y="314" width="8" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+    <text x="96" y="323">v1 · rascunho</text>
+  </g>
+
+  <!-- painel de simulação -->
+  <rect x="336" y="222" width="244" height="136" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+  <text x="354" y="248" font-family="ui-monospace, monospace" font-size="11" fill="#FFC299" letter-spacing="1.4">VISÃO DO ALUNO</text>
+  <rect x="354" y="262" width="208" height="9" rx="4.5" fill="rgba(255,255,255,0.26)"/>
+  <rect x="354" y="281" width="176" height="9" rx="4.5" fill="rgba(255,255,255,0.18)"/>
+  <rect x="354" y="300" width="192" height="9" rx="4.5" fill="rgba(255,255,255,0.18)"/>
+  <rect x="354" y="326" width="86" height="20" rx="10" fill="#FFC299"/>
+
+  <path d="M188 300 L330 300" stroke="#FFC299" stroke-width="2" marker-end="url(#fp-arrow)" opacity="0.8"/>
+</svg>

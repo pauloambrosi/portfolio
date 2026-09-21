@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1200px;height:630px;background:#F7F5F0;font-family:Inter,sans-serif;
+       display:flex;align-items:center;overflow:hidden;position:relative}
+  body::before{content:"";position:absolute;inset:0;
+       background:radial-gradient(52% 78% at 8% 0%,#E8EADF 0,transparent 62%),
+                  radial-gradient(40% 62% at 96% 100%,#FAEBE1 0,transparent 60%)}
+  .bar{position:absolute;left:0;top:0;bottom:0;width:14px;background:#4F5D3F}
+  .bar::after{content:"";position:absolute;left:0;bottom:0;width:14px;height:32%;background:#B05023}
+  .in{position:relative;padding:0 90px 0 104px;width:100%}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:20px;letter-spacing:.2em;
+       text-transform:uppercase;color:#4F5D3F;display:flex;align-items:center;gap:16px;margin-bottom:26px}
+  .eyebrow i{width:40px;height:3px;background:#B05023;border-radius:3px;display:block}
+  h1{font-size:92px;font-weight:650;letter-spacing:-.035em;color:#22261C;line-height:1}
+  .role{margin-top:24px;font-family:"JetBrains Mono",monospace;font-size:26px;color:#59604E;letter-spacing:-.01em}
+  .role b{color:#B05023;font-weight:500}
+  .tags{margin-top:44px;display:flex;gap:12px}
+  .tag{font-family:"JetBrains Mono",monospace;font-size:19px;color:#4F5D3F;
+       padding:10px 20px;border:1.5px solid #CDC6B4;border-radius:999px;background:#fff}
+  .foot{position:absolute;right:90px;bottom:54px;font-family:"JetBrains Mono",monospace;
+       font-size:21px;color:#4F5D3F}
+</style></head>
+<body>
+  <span class="bar"></span>
+  <div class="in">
+    <p class="eyebrow"><i></i>Salvador · Bahia · Brasil</p>
+    <h1>Paulo Ambrosi</h1>
+    <p class="role">Analista de Sistemas · <b>Moodle</b> · <b>PHP</b> · <b>JavaScript</b></p>
+    <div class="tags">
+      <span class="tag">Moodle &amp; LMS</span>
+      <span class="tag">Sistemas EAD</span>
+      <span class="tag">SCORM</span>
+      <span class="tag">12+ anos</span>
+    </div>
+  </div>
+  <p class="foot">paulo.ambrosi.top</p>
+</body></html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLOW — Sistema de Autoria de Conteúdo EAD | Paulo Ambrosi</title>
+<meta name="description" content="Case do FLOW: sistema em PHP que gere a produção de conteúdo EAD no SENAI Bahia — editor por seções, workflow entre perfis, IA e exportação SCORM.">
+<meta name="author" content="Paulo Ambrosi">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#4F5D3F" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161A14" media="(prefers-color-scheme: dark)">
+
+<link rel="canonical" href="https://paulo.ambrosi.top/flow/">
+<link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/flow/">
+<link rel="alternate" hreflang="en" href="https://paulo.ambrosi.top/en/flow/">
+<link rel="alternate" hreflang="x-default" href="https://paulo.ambrosi.top/flow/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Paulo Ambrosi">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="FLOW — Sistema de Autoria de Conteúdo EAD">
+<meta property="og:description" content="Sistema de gestão do fluxo de produção de conteúdo EAD do SENAI Bahia: editor por seções, workflow entre perfis, assistente de IA e exportação SCORM.">
+<meta property="og:url" content="https://paulo.ambrosi.top/flow/">
+<meta property="og:image" content="https://paulo.ambrosi.top/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FLOW — Sistema de Autoria e Gestão de Conteúdo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FLOW — Sistema de Autoria de Conteúdo EAD">
+<meta name="twitter:description" content="Case do sistema de autoria e gestão de conteúdo educacional do SENAI Bahia.">
+<meta name="twitter:image" content="https://paulo.ambrosi.top/assets/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../css/styles.css">
+<script>document.documentElement.classList.remove('no-js');try{var t=localStorage.getItem('pa-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">PA</span>
+      <span>Paulo Ambrosi</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Seções do site">
+      <a class="nav__link" href="../index.html#sobre">Sobre</a>
+      <a class="nav__link" href="../index.html#habilidades">Habilidades</a>
+      <a class="nav__link" href="../index.html#projetos">Projetos</a>
+      <a class="nav__link" href="../moodle/index.html">Moodle</a>
+      <a class="nav__link" href="../index.html#contato">Contato</a>
+    </nav>
+
+    <div class="header__tools">
+      <div class="langswitch">
+        <a href="index.html" aria-current="page" hreflang="pt-BR" lang="pt-BR">PT</a>
+        <a href="../en/flow/index.html" hreflang="en" lang="en">EN</a>
+      </div>
+      <button class="iconbtn" id="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="iconbtn navtoggle" id="nav-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Você está aqui">
+        <a href="../index.html">Início</a>
+        <span aria-hidden="true">/</span>
+        <a href="../index.html#projetos">Projetos</a>
+        <span aria-hidden="true">/</span>
+        <span>FLOW</span>
+      </nav>
+      <p class="eyebrow">Case · SENAI Bahia</p>
+      <h1>FLOW — Sistema de Autoria e Gestão de Conteúdo</h1>
+      <p class="pagehead__sub">Sistema web que acompanha uma aula EAD do plano de aula à entrega final, passando por conteúdo, revisão, design educacional, ilustração, diagramação, audiovisual e desenvolvimento — e exporta o resultado em SCORM, PDF, DOCX ou IDML.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="article">
+        <div class="article__body">
+
+          <figure class="shot" data-reveal>
+            <img src="../assets/flow/minhas-aulas.jpg" width="1600" height="1000" alt="Tela Minhas Aulas do FLOW: fila de aulas do usuário em formato de cards, com indicadores de vídeos e ilustrações pendentes" loading="lazy">
+            <figcaption>Minhas Aulas — a fila do usuário. Cada aula é um card que caminha entre os perfis de produção. <em>Ambiente de demonstração.</em></figcaption>
+          </figure>
+
+          <h2 id="contexto">O contexto</h2>
+          <p>Produzir uma aula EAD envolve muita gente e muitas mãos no mesmo material: quem escreve o conteúdo técnico, quem revisa tecnicamente, quem desenha a experiência de aprendizagem, quem revisa a ortografia, quem ilustra, quem diagrama, quem grava, quem desenvolve. Sem uma ferramenta que concentre esse trabalho, cada etapa acontece em um lugar diferente — arquivos soltos, versões paralelas, revisões por e-mail — e ninguém consegue responder com segurança qual é a versão boa de uma aula, nem em que etapa ela está parada.</p>
+          <p>O FLOW resolve isso no SENAI Bahia: ele <strong>acompanha uma aula do plano de aula até a entrega final</strong>, passando por todas as etapas de produção, e entrega o resultado empacotado para o ambiente onde o aluno vai estudar.</p>
+
+          <h2 id="fluxo">O fluxo</h2>
+          <p>Cada aula é um <strong>card</strong> que caminha entre perfis de usuário. A cada envio, quem manda escolhe a função de destino, o responsável e deixa um comentário — e tudo isso fica registrado. O card ativo é sempre um só; os anteriores formam o histórico da aula.</p>
+
+          <div class="flowchain" data-reveal aria-label="Etapas do fluxo de produção">
+            <span class="flowchain__step">Especialista Técnico</span>
+            <span class="flowchain__step">Revisor Técnico</span>
+            <span class="flowchain__step">Designer Educacional</span>
+            <span class="flowchain__step">Revisor Ortográfico</span>
+            <span class="flowchain__step">Ilustração</span>
+            <span class="flowchain__step">Diagramação</span>
+            <span class="flowchain__step">Audiovisual</span>
+            <span class="flowchain__step">Desenvolvimento</span>
+            <span class="flowchain__step flowchain__step--end">Finalizado</span>
+          </div>
+
+          <figure class="shot" data-reveal>
+            <img src="../assets/flow/fluxo-status.jpg" width="1600" height="1000" alt="Lista de aulas de uma Unidade Curricular no FLOW, mostrando tipo e o perfil responsável por cada aula no momento" loading="lazy">
+            <figcaption>As aulas de uma Unidade Curricular, com o perfil que está com cada uma no momento. <em>Ambiente de demonstração.</em></figcaption>
+          </figure>
+
+          <h2 id="editor">O editor de aulas</h2>
+          <p>A aula é montada por <strong>seções</strong>, dentro dos blocos da estrutura definida pelo template do projeto. São 28 tipos de seção — de texto corrido a recursos que só existem no digital.</p>
+          <ul>
+            <li><strong>Texto e estrutura</strong> — texto, título, citação direta, código.</li>
+            <li><strong>Mídia</strong> — imagem, áudio, vídeo, GIF, imagem+texto, texto+imagem.</li>
+            <li><strong>Caixas didáticas</strong> — Você Sabia?, Fique de Olho, Problematizando, Historiando, Pensando Fora da Caixa, Realidade Aumentada.</li>
+            <li><strong>Interação</strong> — acordeon, abas, flipcard, carrossel, timeline, comparação de imagem, recurso interativo.</li>
+            <li><strong>Avaliação</strong> — múltipla escolha, múltipla seleção e associação, com feedback por alternativa.</li>
+          </ul>
+          <p>Cada seção é versionada individualmente, e quem produz mídia não anexa o arquivo final: escreve o <strong>roteiro</strong> — o pedido de produção — junto com o texto de acessibilidade. A ilustração, o vídeo e o áudio são produzidos pelas equipes seguintes a partir desse roteiro.</p>
+
+          <figure class="shot" data-reveal>
+            <img src="../assets/flow/editor-secoes.jpg" width="1600" height="1000" alt="Editor de aulas do FLOW com os blocos Contexto, Estrutura da Aula e Conhecimento em Pauta, e o painel lateral com os tipos de seção disponíveis" loading="lazy">
+            <figcaption>O editor, com os blocos da aula e o catálogo de seções. <em>Ambiente de demonstração.</em></figcaption>
+          </figure>
+
+          <h2 id="recursos">Além do editor</h2>
+          <ul>
+            <li><strong>Comentários por seção</strong> — a revisão colaborativa acontece ao lado do conteúdo, não em outro canal.</li>
+            <li><strong>Repositório</strong> — busca e reaproveitamento de conteúdo já produzido em outros cursos.</li>
+            <li><strong>Relatórios</strong> — diário, resumo, etapas por Unidade Curricular, finalizados e um quadro Kanban com a visão completa da produção.</li>
+            <li><strong>Checklists e prazos</strong> — o que precisa estar pronto em cada etapa, com data de início e fim.</li>
+            <li><strong>Trilha de auditoria</strong> — quem criou, editou, excluiu, importou ou enviou o quê.</li>
+            <li><strong>Resumo semanal por e-mail</strong> — disparado por cron nas segundas-feiras.</li>
+            <li><strong>Segmentação por setor</strong> — cada usuário enxerga apenas os cursos do seu setor.</li>
+          </ul>
+
+          <h2 id="ia">Assistente de IA</h2>
+          <p>O FLOW tem um chat contextual sobre a aula em edição, construído sobre a API da OpenAI. Duas decisões de projeto merecem nota:</p>
+          <ul>
+            <li>As respostas chegam por <strong>Server-Sent Events</strong>, token a token — quem está escrevendo vê a resposta se formar em vez de esperar o bloco inteiro.</li>
+            <li>O conteúdo da aula <strong>não trafega a cada mensagem</strong>. Ele é gravado previamente como contexto com um hash e injetado só quando uma cadeia nova precisa ser aberta. Se a aula muda, o hash muda e uma cadeia nova começa sozinha, já com o conteúdo atualizado.</li>
+          </ul>
+          <p>O módulo tem limite de contexto, limite por pergunta e <em>rate limit</em> por usuário, configuráveis.</p>
+
+          <h2 id="exportacao">Exportação</h2>
+          <p>No fim do fluxo, a aula sai do FLOW no formato que o destino exige:</p>
+          <dl class="keyvals" data-reveal>
+            <div class="keyval"><dt>SCORM 1.2</dt><dd>pacote .zip montado sobre o template do curso, para publicar no LMS</dd></div>
+            <div class="keyval"><dt>PDF</dt><dd>aula avulsa ou UC completa, com QR Code (mPDF)</dd></div>
+            <div class="keyval"><dt>DOCX</dt><dd>livro em Word (PhpWord)</dd></div>
+            <div class="keyval"><dt>IDML</dt><dd>arquivo para diagramação no InDesign</dd></div>
+          </dl>
+          <p>Os templates SCORM são variações por área — química, alimentos, biotecnologia, energias renováveis, fabricação mecânica, IA industrial, instrumentação, refrigeração — cada uma com o seu visual e os seus exercícios. A versão gerada fica registrada na Unidade Curricular, então dá para saber exatamente qual pacote foi entregue e quando.</p>
+
+          <div class="callout" data-reveal>
+            <p>O ganho central do FLOW é tornar a produção de conteúdo <strong>mais ágil, organizada e rastreável</strong> — três coisas que, num processo espalhado por e-mails e pastas compartilhadas, se perdem primeiro.</p>
+          </div>
+
+          <h2 id="papel">Meu papel</h2>
+          <p>Desenvolvo a plataforma como Analista de Sistemas no SENAI CETIND: a modelagem do fluxo de produção e do banco, o editor de seções e o versionamento, os exportadores SCORM, PDF, DOCX e IDML, os relatórios, e a integração com a API da OpenAI — incluindo o desenho do contexto com hash e do streaming por SSE.</p>
+
+          <h2 id="stack">Stack</h2>
+          <dl class="keyvals" data-reveal>
+            <div class="keyval"><dt>Backend</dt><dd>PHP 8.2, sem framework</dd></div>
+            <div class="keyval"><dt>Banco</dt><dd>MySQL / MariaDB</dd></div>
+            <div class="keyval"><dt>Frontend</dt><dd>Bootstrap 4, jQuery, Froala Editor</dd></div>
+            <div class="keyval"><dt>IA</dt><dd>OpenAI API via Guzzle, streaming SSE</dd></div>
+            <div class="keyval"><dt>Documentos</dt><dd>mPDF, PhpWord</dd></div>
+            <div class="keyval"><dt>Padrão EAD</dt><dd>SCORM 1.2</dd></div>
+          </dl>
+
+          <h2 id="relacionado">Relacionado</h2>
+          <p>Os pacotes SCORM que saem do FLOW são publicados em ambientes Moodle. O trabalho com Moodle — administração, plugins, temas, integrações, relatórios e migração de versão — está detalhado em uma página própria.</p>
+          <p>
+            <a class="btn btn--primary" href="../moodle/index.html">Ver o trabalho com Moodle
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </p>
+        </div>
+
+        <aside class="toc" aria-label="Nesta página">
+          <p class="toc__title">Nesta página</p>
+          <ol>
+            <li><a href="#contexto">O contexto</a></li>
+            <li><a href="#fluxo">O fluxo</a></li>
+            <li><a href="#editor">O editor de aulas</a></li>
+            <li><a href="#recursos">Além do editor</a></li>
+            <li><a href="#ia">Assistente de IA</a></li>
+            <li><a href="#exportacao">Exportação</a></li>
+            <li><a href="#papel">Meu papel</a></li>
+            <li><a href="#stack">Stack</a></li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>© <span id="year">2026</span> Paulo Ambrosi · Salvador, BA</p>
+    <nav class="footer__links" aria-label="Links do rodapé">
+      <a href="../index.html">Início</a>
+      <a href="../moodle/index.html">Moodle</a>
+      <a href="../en/flow/index.html" hreflang="en" lang="en">English</a>
+      <a href="mailto:ambrosipaulo@gmail.com">E-mail</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "FLOW — Sistema de Autoria e Gestão de Conteúdo",
+  "url": "https://paulo.ambrosi.top/flow/",
+  "inLanguage": "pt-BR",
+  "description": "Sistema web de gestão do fluxo de produção de conteúdo educacional EAD do SENAI Bahia: editor de aulas por seções com versionamento, workflow entre perfis de produção, assistente de IA com streaming e exportação em SCORM 1.2, PDF, DOCX e IDML.",
+  "creator": { "@type": "Person", "name": "Paulo Ambrosi", "url": "https://paulo.ambrosi.top/" },
+  "keywords": ["PHP", "MySQL", "JavaScript", "OpenAI API", "SCORM", "EAD", "autoria de conteúdo", "workflow"],
+  "isPartOf": { "@type": "WebSite", "url": "https://paulo.ambrosi.top/" }
+}
+</script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>
