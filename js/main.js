@@ -168,10 +168,16 @@
     var nums = $$('[data-count]');
     if (!nums.length) return;
 
+    var locale = document.documentElement.lang || 'pt-BR';
+
+    function format(value) {
+      try { return value.toLocaleString(locale); } catch (e) { return String(value); }
+    }
+
     function render(el, value) {
       var prefix = el.getAttribute('data-prefix') || '';
       var suffix = el.getAttribute('data-suffix') || '';
-      el.textContent = prefix + value + suffix;
+      el.textContent = prefix + format(value) + suffix;
     }
 
     function run(el) {

@@ -12,7 +12,8 @@ JavaScript puro. A única requisição externa é o Google Fonts.
 index.html            home (pt-BR)
 flow/                 case do FLOW (pt-BR)
 moodle/               case do Moodle (pt-BR)
-en/                   os mesmos três em inglês
+ia/                   case de IA aplicada e dev assistido (pt-BR)
+en/                   os mesmos quatro em inglês
 404.html
 css/styles.css        folha única; as cores vivem em custom properties no topo
 js/main.js            tema, menu, scrollspy, reveal, contadores, filtros
@@ -54,7 +55,19 @@ Rode se mexer nas cores.
 
 O texto está direto no HTML — não há CMS nem arquivo de dados. Ao mudar algo em
 português, mude o equivalente em inglês: `index.html` ↔ `en/index.html`,
-`flow/` ↔ `en/flow/`, `moodle/` ↔ `en/moodle/`.
+`flow/` ↔ `en/flow/`, `moodle/` ↔ `en/moodle/`, `ia/` ↔ `en/ia/`.
+
+### Ao mexer em `css/styles.css` ou `js/main.js`
+
+Os dois são carregados com uma versão na query (`styles.css?v=20261026`), para
+quem já visitou o site não receber a cópia antiga do cache. **Depois de editar
+qualquer um dos dois, suba a versão em todos os HTML:**
+
+```bash
+sed -i 's/?v=20261026/?v=AAAAMMDD/g' *.html */index.html */*/index.html
+```
+
+Sem isso a mudança não aparece para quem já tem o arquivo em cache.
 
 ### Trocar as cores
 
@@ -71,7 +84,8 @@ Em `index.html`, dentro de `<div class="chips">`:
 ```
 
 `data-tags` aceita mais de um grupo separado por espaço. Grupos existentes:
-`lms`, `backend`, `frontend`, `ia`, `soft`. Repita em `en/index.html`.
+`lms`, `backend`, `frontend`, `ia` (IA aplicada), `devia` (dev assistido por
+IA), `soft`. Repita em `en/index.html`.
 
 ### Trocar as capturas do Moodle
 
@@ -101,4 +115,6 @@ python3 -m http.server 4173
 
 Os textos vêm do currículo em `pauloambrosi/cv`. O case do FLOW vem do README
 do próprio sistema; as capturas saíram do manual do Especialista Técnico, de um
-ambiente de demonstração, sem dados reais de usuários.
+ambiente de demonstração, sem dados reais de usuários. A página de IA descreve
+funcionalidades lidas no código do `flow_2` e do `senaiclass` — nenhum segredo,
+caminho interno, endereço de servidor ou dado de aluno aparece no site.

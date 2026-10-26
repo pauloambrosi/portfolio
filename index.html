@@ -37,7 +37,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=20261026">
 <script>document.documentElement.classList.remove('no-js');try{var t=localStorage.getItem('pa-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head>
 <body>
@@ -54,6 +54,7 @@
       <a class="nav__link" href="#sobre">Sobre</a>
       <a class="nav__link" href="#habilidades">Habilidades</a>
       <a class="nav__link" href="#projetos">Projetos</a>
+      <a class="nav__link" href="ia/index.html">IA</a>
       <a class="nav__link" href="#experiencia">Experiência</a>
       <a class="nav__link" href="#contato">Contato</a>
     </nav>
@@ -151,11 +152,11 @@
           <div class="stat__label">anos em tecnologia educacional</div>
         </div>
         <div class="stat">
-          <div class="stat__num" data-count="750" data-prefix="~">~750</div>
-          <div class="stat__label">usuários no Observatório ObsPLE-PL2</div>
+          <div class="stat__num" data-count="1058">1.058</div>
+          <div class="stat__label">alunos no Observatório ObsPLE-PL2</div>
         </div>
         <div class="stat">
-          <div class="stat__num" data-count="4">4</div>
+          <div class="stat__num" data-count="5">5</div>
           <div class="stat__label">projetos selecionados no portfólio</div>
         </div>
         <div class="stat">
@@ -180,7 +181,8 @@
         <button class="filter" type="button" data-filter="lms" aria-pressed="false">LMS &amp; EAD</button>
         <button class="filter" type="button" data-filter="backend" aria-pressed="false">Backend</button>
         <button class="filter" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
-        <button class="filter" type="button" data-filter="ia" aria-pressed="false">Automação &amp; IA</button>
+        <button class="filter" type="button" data-filter="ia" aria-pressed="false">IA aplicada</button>
+        <button class="filter" type="button" data-filter="devia" aria-pressed="false">Dev assistido por IA</button>
         <button class="filter" type="button" data-filter="soft" aria-pressed="false">Processo</button>
       </div>
 
@@ -203,7 +205,19 @@
         <span class="chip" data-tags="frontend">Adobe Animate</span>
         <span class="chip" data-tags="frontend">CreateJS</span>
         <span class="chip" data-tags="ia">OpenAI API</span>
+        <span class="chip" data-tags="ia">Responses API</span>
+        <span class="chip" data-tags="ia">Structured output (JSON Schema)</span>
+        <span class="chip" data-tags="ia">Streaming SSE</span>
+        <span class="chip" data-tags="ia">Engenharia de prompt</span>
+        <span class="chip" data-tags="ia">Geração de imagem</span>
+        <span class="chip" data-tags="ia">Controle de custo de IA</span>
         <span class="chip" data-tags="ia">n8n</span>
+        <span class="chip" data-tags="devia">Claude Code</span>
+        <span class="chip" data-tags="devia">MCP</span>
+        <span class="chip" data-tags="devia">Skills e hooks</span>
+        <span class="chip" data-tags="devia">Spec-driven development</span>
+        <span class="chip" data-tags="devia">Grafo de código</span>
+        <span class="chip" data-tags="devia">Revisão assistida por IA</span>
         <span class="chip" data-tags="soft">Pesquisa</span>
         <span class="chip" data-tags="soft">Resolução de problemas</span>
       </div>
@@ -218,7 +232,7 @@
       <div class="section__head" data-reveal>
         <p class="eyebrow">Projetos</p>
         <h2 id="proj-t">Projetos selecionados</h2>
-        <p class="section__lead">Um sistema de autoria construído do zero e três ambientes virtuais de aprendizagem para instituições nacionais e internacionais.</p>
+        <p class="section__lead">Dois sistemas construídos do zero e três ambientes virtuais de aprendizagem para instituições nacionais e internacionais.</p>
       </div>
 
       <div class="projects">
@@ -240,11 +254,25 @@
           </figure>
         </article>
 
+        <article class="card card--split" data-reveal>
+          <div>
+            <p class="card__org">SENAI · ferramenta de sala de aula</p>
+            <h3 class="card__title"><a href="ia/index.html#senaiclass">SENAI Class — aula interativa com IA</a></h3>
+            <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">OpenAI API</span><span class="tag">Entra ID</span></div>
+          </div>
+          <div>
+            <p class="card__text">Ferramenta para o professor levar atividade gamificada para a sala: quiz, situação de aprendizagem e aula interativa. A IA gera as questões e o material a partir do tema, avalia as respostas abertas e sugere o feedback — o professor confere e decide. Login institucional via Microsoft Entra ID.</p>
+            <span class="card__more">Ver o trabalho com IA
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </article>
+
         <div class="projects__row">
           <article class="card" data-reveal>
             <p class="card__org">CNPq · IILP / CPLP</p>
             <h3 class="card__title"><a href="moodle/index.html#obsple">ObsPLE-PL2 — Observatório de Português como Língua Estrangeira</a></h3>
-            <p class="card__text">Ambiente Virtual de Aprendizagem para uma rede internacional vinculada ao CNPq e ao IILP/CPLP. Personalização da plataforma Moodle, diagramação dos conteúdos e melhorias de navegação e organização da informação. Utilizado em três edições do curso, com cerca de 750 usuários.</p>
+            <p class="card__text">Ambiente Virtual de Aprendizagem para uma rede internacional vinculada ao CNPq e ao IILP/CPLP. Personalização da plataforma Moodle, diagramação dos conteúdos e melhorias de navegação e organização da informação. Utilizado em três edições do curso, com 1.058 alunos.</p>
             <div class="tags"><span class="tag">Moodle</span><span class="tag">PHP</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
           </article>
 
@@ -264,7 +292,10 @@
         </div>
       </div>
 
-      <p style="margin-top:2rem" data-reveal>
+      <p style="margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap" data-reveal>
+        <a class="btn btn--primary" href="ia/index.html">Ver o trabalho com IA
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
         <a class="btn btn--ghost" href="moodle/index.html">Ver o trabalho com Moodle em detalhe
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
@@ -363,6 +394,7 @@
     <nav class="footer__links" aria-label="Links do rodapé">
       <a href="flow/index.html">FLOW</a>
       <a href="moodle/index.html">Moodle</a>
+      <a href="ia/index.html">IA</a>
       <a href="en/index.html" hreflang="en" lang="en">English</a>
       <a href="https://github.com/pauloambrosi" rel="noopener" target="_blank">GitHub</a>
     </nav>
@@ -390,7 +422,7 @@
         { "@type": "CollegeOrUniversity", "name": "Universidade Salvador (UNIFACS)" },
         { "@type": "EducationalOrganization", "name": "SENAI Bahia" }
       ],
-      "knowsAbout": ["Moodle", "Administração de LMS", "Educação a Distância", "SCORM", "PHP", "JavaScript", "MySQL", "REST API", "Adobe Animate", "CreateJS", "Simuladores educacionais", "n8n", "OpenAI API"],
+      "knowsAbout": ["Moodle", "Administração de LMS", "Educação a Distância", "SCORM", "PHP", "JavaScript", "MySQL", "REST API", "Adobe Animate", "CreateJS", "Simuladores educacionais", "n8n", "OpenAI API", "Inteligência artificial aplicada", "Engenharia de prompt", "Structured output", "Claude Code", "Model Context Protocol", "Spec-driven development"],
       "knowsLanguage": ["pt-BR", "en"],
       "sameAs": ["https://www.linkedin.com/in/pauloambrosi", "https://github.com/pauloambrosi"]
     },
@@ -409,13 +441,14 @@
         { "@type": "ListItem", "position": 1, "name": "FLOW — Sistema de Autoria e Gestão de Conteúdo", "url": "https://paulo.ambrosi.top/flow/" },
         { "@type": "ListItem", "position": 2, "name": "ObsPLE-PL2 — Observatório de Português como Língua Estrangeira", "url": "https://paulo.ambrosi.top/moodle/#obsple" },
         { "@type": "ListItem", "position": 3, "name": "Projeto (Re)Integro", "url": "https://paulo.ambrosi.top/moodle/#reintegro" },
-        { "@type": "ListItem", "position": 4, "name": "Cruzando Fronteiras", "url": "https://paulo.ambrosi.top/moodle/#fronteiras" }
+        { "@type": "ListItem", "position": 4, "name": "Cruzando Fronteiras", "url": "https://paulo.ambrosi.top/moodle/#fronteiras" },
+        { "@type": "ListItem", "position": 5, "name": "SENAI Class — aula interativa com IA", "url": "https://paulo.ambrosi.top/ia/#senaiclass" }
       ]
     }
   ]
 }
 </script>
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v=20261026" defer></script>
 </body>
 </html>
  

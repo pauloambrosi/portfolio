@@ -859,3 +859,20 @@ a:hover { color: var(--accent-hover); }
 /* legenda de captura */
 .shot figcaption em { color: var(--moss); font-style: normal; font-size: .95em; }
 .article__body .shot { margin-top: 1.75rem; }
+
+/* ---------- Card em faixa (sistema próprio, fora da grade de três) ---------- */
+.card--split {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: center;
+}
+.card--split .card__title { margin-bottom: 1rem; }
+.card--split .tags { margin-top: 0; }
+.card--split .card__text { flex: none; }
+.card--split .card__more { margin-top: 1rem; }
+
+@media (max-width: 760px) {
+  .card--split { grid-template-columns: 1fr; gap: 1rem; }
+  .card--split .card__title { margin-bottom: .7rem; }
+}

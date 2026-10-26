@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://paulo.ambrosi.top/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/"/>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://paulo.ambrosi.top/flow/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/flow/"/>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://paulo.ambrosi.top/moodle/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/moodle/"/>
@@ -29,8 +29,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://paulo.ambrosi.top/moodle/"/>
   </url>
   <url>
+    <loc>https://paulo.ambrosi.top/ia/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paulo.ambrosi.top/en/ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paulo.ambrosi.top/ia/"/>
+  </url>
+  <url>
     <loc>https://paulo.ambrosi.top/en/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/"/>
@@ -39,7 +48,7 @@
   </url>
   <url>
     <loc>https://paulo.ambrosi.top/en/flow/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/flow/"/>
@@ -48,11 +57,20 @@
   </url>
   <url>
     <loc>https://paulo.ambrosi.top/en/moodle/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/moodle/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://paulo.ambrosi.top/en/moodle/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://paulo.ambrosi.top/moodle/"/>
+  </url>
+  <url>
+    <loc>https://paulo.ambrosi.top/en/ia/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://paulo.ambrosi.top/en/ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paulo.ambrosi.top/ia/"/>
   </url>
 </urlset>

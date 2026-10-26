@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applied AI in education | Paulo Ambrosi</title>
+<meta name="description" content="AI in production in vocational education: content generation and grading with the OpenAI API, structured output and cost control — plus AI-assisted development.">
+<meta name="author" content="Paulo Ambrosi">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#4F5D3F" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161A14" media="(prefers-color-scheme: dark)">
+
+<link rel="canonical" href="https://paulo.ambrosi.top/en/ia/">
+<link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/ia/">
+<link rel="alternate" hreflang="en" href="https://paulo.ambrosi.top/en/ia/">
+<link rel="alternate" hreflang="x-default" href="https://paulo.ambrosi.top/ia/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Paulo Ambrosi">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Applied AI in education — Paulo Ambrosi">
+<meta property="og:description" content="AI features in production in vocational education, with the OpenAI API, structured output and cost control — and how I build software with AI.">
+<meta property="og:url" content="https://paulo.ambrosi.top/en/ia/">
+<meta property="og:image" content="https://paulo.ambrosi.top/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Applied AI in education — Paulo Ambrosi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Applied AI in education — Paulo Ambrosi">
+<meta name="twitter:description" content="AI in production in vocational education, and AI-assisted software development.">
+<meta name="twitter:image" content="https://paulo.ambrosi.top/assets/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../css/styles.css?v=20261026">
+<script>document.documentElement.classList.remove('no-js');try{var t=localStorage.getItem('pa-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">PA</span>
+      <span>Paulo Ambrosi</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Site sections">
+      <a class="nav__link" href="../index.html#about">About</a>
+      <a class="nav__link" href="../index.html#skills">Skills</a>
+      <a class="nav__link" href="../index.html#projects">Projects</a>
+      <a class="nav__link" href="../flow/index.html">FLOW</a>
+      <a class="nav__link" href="../moodle/index.html">Moodle</a>
+      <a class="nav__link" href="../index.html#contact">Contact</a>
+    </nav>
+
+    <div class="header__tools">
+      <div class="langswitch">
+        <a href="../../ia/index.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+        <a href="index.html" aria-current="page" hreflang="en" lang="en">EN</a>
+      </div>
+      <button class="iconbtn" id="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="iconbtn navtoggle" id="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="../index.html#projects">Projects</a>
+        <span aria-hidden="true">/</span>
+        <span>AI</span>
+      </nav>
+      <p class="eyebrow">Specialty</p>
+      <h1>Applied AI in education</h1>
+      <p class="pagehead__sub">Artificial intelligence features in use inside the systems I build — and the way I use AI to build software.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="article">
+        <div class="article__body">
+
+          <h2 id="production">What is already running</h2>
+          <p>The AI here is not a demo: it sits inside two systems used by the people who produce the courses and the people who teach them in vocational education. Every one of these features was designed, implemented and shipped by me.</p>
+
+          <h3 id="flow">In FLOW — e-learning content production</h3>
+          <ul>
+            <li><strong>Contextual assistant in the editor</strong> — a chat that knows the lesson currently open. Answers arrive by <em>streaming</em>, token by token, and the lesson content is not re-sent with every question: it is stored as context with a <em>hash</em>, and only a real edit to the lesson opens a new chain.</li>
+            <li><strong>Assisted proofreading</strong> — the AI walks the lesson sections and returns proposed corrections, shown as a <em>diff</em> for the proofreader to accept or reject. The proofreader remains the one who decides.</li>
+            <li><strong>Personalized assessment inside the course</strong> — a conversational simulator for the student, with the conversation chained by the API itself from one message to the next.</li>
+          </ul>
+          <p><a href="../flow/index.html">Read the full FLOW case study →</a></p>
+
+          <h3 id="senaiclass">In SENAI Class — the classroom</h3>
+          <p>A tool for teachers to bring gamified activities into the room: game-show style quizzes, learning situations and interactive lessons, with a leaderboard and history.</p>
+          <ul>
+            <li><strong>Question generation from a topic</strong> — single choice, multiple selection and open questions, as many of each type as the teacher asks for. Questions already generated go into an exclusion list, so the next round does not repeat what already exists.</li>
+            <li><strong>Grading of open answers</strong> — the AI compares the student's answer with what was expected, returns a verdict (correct, partial or wrong) and writes the feedback. <strong>The teacher reviews and can change it before it counts.</strong></li>
+            <li><strong>Learning situations and interactive lessons</strong> — the AI drafts the full text from a title, topic and technical field, and describes the images each passage would call for.</li>
+            <li><strong>Image generation</strong> — each description becomes a real image, generated and stored by the system, with a configurable image model.</li>
+          </ul>
+
+          <div class="callout" data-reveal>
+            <p>In all of them the AI <strong>proposes</strong> and a person <strong>decides</strong>: the proofreader accepts or rejects the correction, the teacher checks the feedback before it counts. That is not an interface detail — it is what makes the tool usable inside an educational institution.</p>
+          </div>
+
+          <h2 id="engineering">How this is built</h2>
+          <p>Wiring a model to an API is the easy part. What keeps the feature alive in production is everything around it:</p>
+
+          <dl class="keyvals" data-reveal>
+            <div class="keyval"><dt>API</dt><dd>OpenAI Responses API, chaining the conversation by previous response id</dd></div>
+            <div class="keyval"><dt>Reliable output</dt><dd>structured output with JSON Schema — the system receives data, not prose to parse</dd></div>
+            <div class="keyval"><dt>Live response</dt><dd>streaming over Server-Sent Events</dd></div>
+            <div class="keyval"><dt>Cost</dt><dd>per-user hourly limit, token ceiling computed from what was requested</dd></div>
+            <div class="keyval"><dt>Observability</dt><dd>every call recorded in a table: who asked, for what, what it cost, whether it worked or which error it hit</dd></div>
+            <div class="keyval"><dt>Secrets</dt><dd>key in an environment variable, out of version control, with an example file carrying no real value</dd></div>
+          </dl>
+
+          <h3 id="prompt">Prompt engineering in practice</h3>
+          <p>The prompt that generates the questions does not say "write 10 questions". It carries the rules a good assessment item has to follow, and each of them is there because its absence showed up in the output:</p>
+          <ul>
+            <li>short stems, because they will be read off a projector, from a distance;</li>
+            <li>plausible distractors, the same length and style as the correct option — an obvious distractor measures nothing;</li>
+            <li>no "all of the above";</li>
+            <li>the position of the correct option varying across questions;</li>
+            <li>and the rule that matters most in technical training: <strong>never invent a standard, a value or a figure</strong>.</li>
+          </ul>
+
+          <h2 id="aidev">AI-assisted development</h2>
+          <p>I also use AI to write software, and I treat that as engineering rather than a shortcut. What makes the difference is not the model — it is the environment built around it.</p>
+
+          <ul>
+            <li><strong>Curated per-repository context</strong> — each project has an instruction document carrying the code conventions, the helpers that already exist (so they are not duplicated), and a section of known traps: the bugs that cost dearly once and must not come back. That is what stops the assistant from reintroducing an old problem.</li>
+            <li><strong>Code graph</strong> — the repository is indexed and queryable through an MCP server, used to <em>narrow the scope before reading</em>: find the function, measure the blast radius of a change. With one explicit rule, because graphs are wrong sometimes: <strong>the source beats the graph</strong>.</li>
+            <li><strong>Hook automation</strong> — the index updates itself on every file edit, so it is never stale at the moment a decision depends on it.</li>
+            <li><strong>Spec-driven development</strong> — a large change does not start in the code: it starts as a specification, becomes a plan broken into tasks with a definition of done, and each task leaves a record of what was done and what was left open. When the process has to be adapted, the decision is written down together with the cost of being wrong about it.</li>
+            <li><strong>Review as a separate pass</strong> — whoever wrote it does not approve it. Verification is its own step, with the diff in hand.</li>
+          </ul>
+
+          <div class="callout callout--accent" data-reveal>
+            <p>The practical result is being able to work safely in a large legacy system — PHP accumulated over years, files thousands of lines long, exporters with known traps — without having to remember all of it. <strong>This portfolio was built the same way</strong>, from the specification to the contrast check.</p>
+          </div>
+
+          <h2 id="stack">Summary</h2>
+          <dl class="keyvals" data-reveal>
+            <div class="keyval"><dt>Applied AI</dt><dd>OpenAI API, Responses API, structured output, SSE, image generation</dd></div>
+            <div class="keyval"><dt>In production</dt><dd>FLOW and SENAI Class, at SENAI Bahia</dd></div>
+            <div class="keyval"><dt>Assisted dev</dt><dd>Claude Code, MCP, skills and hooks, spec-driven development</dd></div>
+            <div class="keyval"><dt>Foundation</dt><dd>PHP 8.2, MySQL, JavaScript</dd></div>
+          </dl>
+
+          <p style="margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap">
+            <a class="btn btn--primary" href="../flow/index.html">FLOW case study
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="../index.html#contact">Get in touch</a>
+          </p>
+        </div>
+
+        <aside class="toc" aria-label="On this page">
+          <p class="toc__title">On this page</p>
+          <ol>
+            <li><a href="#production">What is already running</a></li>
+            <li><a href="#flow">In FLOW</a></li>
+            <li><a href="#senaiclass">In SENAI Class</a></li>
+            <li><a href="#engineering">How this is built</a></li>
+            <li><a href="#prompt">Prompt engineering</a></li>
+            <li><a href="#aidev">AI-assisted development</a></li>
+            <li><a href="#stack">Summary</a></li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>© <span id="year">2026</span> Paulo Ambrosi · Salvador, BA, Brazil</p>
+    <nav class="footer__links" aria-label="Footer links">
+      <a href="../index.html">Home</a>
+      <a href="../flow/index.html">FLOW</a>
+      <a href="../moodle/index.html">Moodle</a>
+      <a href="../../ia/index.html" hreflang="pt-BR" lang="pt-BR">Português</a>
+      <a href="mailto:ambrosipaulo@gmail.com">Email</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Applied AI in education",
+  "url": "https://paulo.ambrosi.top/en/ia/",
+  "inLanguage": "en",
+  "description": "Artificial intelligence features in production in vocational education — content generation and grading with the OpenAI API, structured output, SSE streaming, cost control — and AI-assisted software development.",
+  "creator": { "@type": "Person", "name": "Paulo Ambrosi", "url": "https://paulo.ambrosi.top/" },
+  "keywords": ["OpenAI API", "Responses API", "structured output", "prompt engineering", "Claude Code", "MCP", "spec-driven development", "AI in education", "PHP"],
+  "isPartOf": { "@type": "WebSite", "url": "https://paulo.ambrosi.top/" }
+}
+</script>
+<script src="../../js/main.js?v=20261026" defer></script>
+</body>
+</html>
