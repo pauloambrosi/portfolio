@@ -16,7 +16,8 @@ from html.parser import HTMLParser
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://paulo.ambrosi.top"
 PHONE_PATTERNS = [r"9921[\s\-]?9049", r"\+55\s?71", r"71\s?99213"]
-SKIP_DIRS = {".git", "docs", "tools", "node_modules"}
+# scrollcraft/ e node_modules/ sao material de build, nao o site publicado.
+SKIP_DIRS = {".git", "docs", "tools", "node_modules", "scrollcraft", ".omc", ".claude"}
 
 errors = []
 warnings = []
