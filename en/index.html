@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Paulo Ambrosi — Moodle &amp; E-learning Systems Specialist</title>
-<meta name="description" content="Systems Analyst with 12+ years in Moodle, virtual learning environments and web development with PHP and JavaScript. Based in Salvador, Brazil.">
+<title>Paulo Ambrosi — Digital Products &amp; AI Solutions</title>
+<meta name="description" content="Systems Analyst who builds digital products and integrates AI into management systems and automation. 12+ years, from Moodle to AI agents. Salvador, Brazil.">
 <meta name="author" content="Paulo Ambrosi">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
@@ -19,18 +19,18 @@
 <meta property="og:site_name" content="Paulo Ambrosi">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="pt_BR">
-<meta property="og:title" content="Paulo Ambrosi — Moodle &amp; E-learning Systems Specialist">
-<meta property="og:description" content="Systems Analyst with 12+ years in Moodle, virtual learning environments and web development with PHP and JavaScript.">
+<meta property="og:title" content="Paulo Ambrosi — Digital Products &amp; AI Solutions">
+<meta property="og:description" content="Systems Analyst who builds digital products and integrates artificial intelligence into management systems and automation.">
 <meta property="og:url" content="https://paulo.ambrosi.top/en/">
 <meta property="og:image" content="https://paulo.ambrosi.top/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Paulo Ambrosi — Systems Analyst, Moodle specialist">
+<meta property="og:image:alt" content="Paulo Ambrosi — Systems Analyst, digital products and AI solutions">
 <meta property="profile:first_name" content="Paulo">
 <meta property="profile:last_name" content="Ambrosi">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Paulo Ambrosi — Moodle &amp; E-learning Systems Specialist">
-<meta name="twitter:description" content="Systems Analyst with 12+ years in Moodle, VLEs and web development with PHP and JavaScript.">
+<meta name="twitter:title" content="Paulo Ambrosi — Digital Products &amp; AI Solutions">
+<meta name="twitter:description" content="Systems Analyst who builds digital products and integrates AI into management systems and automation.">
 <meta name="twitter:image" content="https://paulo.ambrosi.top/assets/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
@@ -137,7 +137,34 @@ body { letter-spacing: .004em; }
   font-size: clamp(2.9rem, 1.3rem + 9.4vw, 7.6rem); line-height: .98;
   letter-spacing: -.004em; margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
 }
-.plate__claim { font-size: clamp(1.05rem, 1rem + .45vw, 1.3rem); max-width: 34ch; color: var(--sc-ink-soft); }
+.plate__claim { max-width: 40rem; color: var(--sc-ink); }
+.plate__role {
+  display: block; margin-bottom: .95rem;
+  font-family: var(--sc-font-mono); font-size: .74rem; font-weight: 500;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--sc-accent);
+}
+/* Frase que se escreve e se apaga. A altura e reservada pela maior frase
+   (medida em JS), senao o resto do herói pula a cada troca de linha. */
+.typer {
+  display: block;
+  font-family: var(--sc-font-display); font-weight: 500;
+  font-size: clamp(1.45rem, 1.1rem + 1.5vw, 2.15rem);
+  line-height: 1.22; letter-spacing: .004em; color: var(--sc-ink);
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+.typer__caret {
+  display: inline-block; width: 2px; height: .95em; margin-left: .12em;
+  vertical-align: -.1em; background: var(--sc-accent);
+  animation: typer-blink 1.05s steps(1) infinite;
+}
+.typer.is-moving .typer__caret { animation: none; }
+@keyframes typer-blink { 50% { opacity: 0; } }
+.typer.is-static .typer__caret { display: none; }
+.vh {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+@media (prefers-reduced-motion: reduce) { .typer__caret { display: none; } }
 .plate__meta {
   margin-top: clamp(2.5rem, 6vw, 4rem); display: flex; flex-wrap: wrap; gap: 1.5rem;
   font-family: var(--sc-font-mono); font-size: .72rem; letter-spacing: .08em;
@@ -394,9 +421,11 @@ body { letter-spacing: .004em; }
 <section class="ch ch--paper" id="cap1" data-sc-act="flow">
   <div class="ch__inner plate" data-sc-in data-sc-stagger="70">
     <h1 class="plate__name" data-sc-parallax="-0.08">Paulo Ambrosi</h1>
-    <p class="plate__claim">Systems Analyst. I build, customize and maintain
-      <span class="proof"><span class="proof__out">systems</span><span class="proof__in">virtual learning environments</span><span class="proof__mark">rev</span></span>
-      — from the Moodle plugin to the authoring system that organizes the production of an entire course.</p>
+    <p class="plate__claim">
+      <span class="plate__role">Systems Analyst</span>
+      <span class="typer" data-typer aria-hidden="true" data-phrases="I build, implement and test digital products.|I integrate artificial intelligence into management systems and automation.|I design AI that proposes while a person decides.|I automate processes with AI agents."><span class="typer__text">I build, implement and test digital products.</span><span class="typer__caret"></span></span>
+      <span class="vh" data-typer-sr>I build, implement and test digital products. I integrate artificial intelligence into management systems and automation. I design AI that proposes while a person decides. I automate processes with AI agents.</span>
+    </p>
     <p class="plate__meta">
       <span>Salvador · Brazil</span><span>12+ years</span><span>SENAI CETIND</span>
     </p>
@@ -410,18 +439,18 @@ body { letter-spacing: .004em; }
   </div>
   <div class="ch__inner" style="padding-bottom:clamp(4rem,9vw,7rem)">
     <div class="measure" data-sc-in data-sc-stagger="60" style="margin-top:clamp(2.5rem,6vw,4rem)">
-      <p>Systems Analyst with over 12 years of experience in web development, virtual learning environments and educational technologies. I work at SENAI CETIND developing systems in PHP, JavaScript, MySQL and REST APIs, as well as administering, customizing and evolving Moodle platforms.</p>
+      <p>Systems Analyst with over 12 years of experience building digital products, from web development to integrating artificial intelligence into management systems. I work at SENAI CETIND developing systems in PHP, JavaScript, MySQL and REST APIs, with AI integrated through the OpenAI API, as well as administering, customizing and evolving Moodle platforms.</p>
       <p>I have experience creating educational games and simulators with Adobe Animate, HTML5 and JavaScript, as well as implementing learning environments for national and international institutions, including projects developed in partnership with OEI, universities and government agencies.</p>
     </div>
 
     <div class="record" data-sc-in data-sc-stagger="50">
       <div class="record__row"><span class="record__k">Degree</span><span class="record__v">Information Systems<small>Universidade Salvador (UNIFACS) · 2013–2018</small></span></div>
       <div class="record__row"><span class="record__k">Technical</span><span class="record__v">Web Development<small>SENAI Bahia · 2012–2013</small></span></div>
-      <div class="record__row"><span class="record__k">Focus</span><span class="record__v">Moodle, e-learning and AI-powered educational technology<small>Environments for public and international institutions</small></span></div>
+      <div class="record__row"><span class="record__k">Focus</span><span class="record__v">Digital products, AI integration and automation<small>Environments for public and international institutions</small></span></div>
     </div>
 
     <div class="figures" data-sc-in data-sc-stagger="110">
-      <div><div class="figure__n" data-sc-count="0 12" data-sc-count-at="0.02 0.13">12</div><div class="figure__l">years in educational technology</div></div>
+      <div><div class="figure__n" data-sc-count="0 12" data-sc-count-at="0.02 0.13">12</div><div class="figure__l">years building digital products</div></div>
       <div><div class="figure__n"><span data-sc-count="0 145" data-sc-count-at="0.02 0.13">145</span><span class="figure__suf">k</span></div><div class="figure__l">students registered in the SENAI Bahia VLE</div></div>
       <div><div class="figure__n" data-sc-count="0 1058" data-sc-count-at="0.02 0.13">1058</div><div class="figure__l">students on the ObsPLE-PL2 Observatory</div></div>
       <div><div class="figure__n" data-sc-count="0 5" data-sc-count-at="0.02 0.13">5</div><div class="figure__l">selected projects</div></div>
@@ -470,9 +499,9 @@ body { letter-spacing: .004em; }
   <div data-sc-stage>
     <div class="ch__inner peak">
       <div data-sc-cue="0 1 0">
-        <p class="peak__kicker">04 · Featured project</p>
+        <p class="peak__kicker">04 · Featured digital product</p>
         <h3>FLOW</h3>
-        <p>A system that follows an e-learning lesson from the lesson plan to final delivery, through content, review, instructional design, illustration, layout, audiovisual and development. Exports as SCORM, PDF, DOCX and IDML.</p>
+        <p>A digital product that runs the content production workflow, from the lesson plan to final delivery. AI is built into the process itself: an assistant inside the editor and assisted proofreading. Exports as SCORM, PDF, DOCX and IDML.</p>
         <p style="margin-top:1rem">Inside it, the
           <span class="proof"><span class="proof__out">AI writes</span><span class="proof__in">AI proposes and a person decides</span><span class="proof__mark">rev</span></span>.</p>
         <div class="peak__tags"><span>PHP 8.2</span><span>MySQL</span><span>JavaScript</span><span>OpenAI API</span><span>SCORM 1.2</span></div>
@@ -496,9 +525,9 @@ body { letter-spacing: .004em; }
   <div data-sc-stage>
     <div class="rail" data-sc-pan="0.04" data-stagger-items>
       <div class="rail__lead">
-        <p class="peak__kicker">05 · Project</p>
+        <p class="peak__kicker">05 · Digital product</p>
         <h3 class="rail__title">SENAI&nbsp;Class</h3>
-        <p>A tool for teachers to bring gamified activities into the room: quizzes, learning situations and interactive lessons, with a leaderboard and history. AI writes the first draft; the teacher is the one who decides.</p>
+        <p>A digital product for teachers to bring gamified activities into the room: quizzes, learning situations and interactive lessons, with a leaderboard and history. AI drafts the questions and the material, grades open answers and suggests the feedback; the teacher is the one who decides.</p>
         <div class="peak__tags"><span>PHP</span><span>MySQL</span><span>OpenAI API</span><span>Entra ID</span></div>
         <a class="peak__link" href="ia/index.html#senaiclass">See the AI work →</a>
       </div>
@@ -630,7 +659,7 @@ body { letter-spacing: .004em; }
   <div class="ch__inner colophon">
     <div data-sc-reveal="up" data-sc-reveal-at="0.02 0.4">
       <p class="intertitle__n" style="margin-bottom:1.5rem">08 · Contact</p>
-      <p class="colophon__ask">Available for Moodle projects, virtual learning environments and educational web development. The shortest way there is
+      <p class="colophon__ask">Available for digital product projects, AI integration with management systems and automation. The shortest way there is
         <a href="mailto:ambrosipaulo@gmail.com">ambrosipaulo@gmail.com</a>.</p>
     </div>
     <div class="colophon__grid" data-sc-in data-sc-stagger="60">
@@ -664,7 +693,7 @@ body { letter-spacing: .004em; }
       "givenName": "Paulo",
       "familyName": "Ambrosi",
       "jobTitle": "Systems Analyst",
-      "description": "Systems Analyst with over 12 years of experience in web development, virtual learning environments and educational technologies.",
+      "description": "Systems Analyst with over 12 years of experience building digital products and integrating artificial intelligence into management systems and automation.",
       "url": "https://paulo.ambrosi.top/en/",
       "image": "https://paulo.ambrosi.top/assets/profile.jpg",
       "email": "mailto:ambrosipaulo@gmail.com",
@@ -714,27 +743,8 @@ body { letter-spacing: .004em; }
   if (reduced.matches || !('IntersectionObserver' in window)) {
     proofs.forEach(function (p) { p.classList.add('is-resolved'); });
   } else {
-    // A primeira marca ja esta em tela quando a pagina carrega. Se resolvesse no
-    // load, ninguem veria a proposta: o movimento acontece antes de existir leitor.
-    // Ela espera o primeiro gesto de leitura.
-    var first = proofs[0];
-    var rest = proofs.slice(1);
-
-    var armed = false;
-    function armFirst() {
-      if (armed) return;
-      armed = true;
-      window.removeEventListener('scroll', armFirst);
-      window.removeEventListener('keydown', armFirst);
-      window.removeEventListener('pointerdown', armFirst);
-      first.classList.add('is-resolved');
-    }
-    window.addEventListener('scroll', armFirst, { passive: true, once: false });
-    window.addEventListener('keydown', armFirst);
-    window.addEventListener('pointerdown', armFirst);
-    // Quem nunca rola tambem precisa acabar lendo o texto aceito.
-    window.setTimeout(armFirst, 2600);
-
+    // O heroi agora e a frase que se digita; as marcas de revisao ficam para
+    // quando o leitor chega nelas.
     var io = new IntersectionObserver(function (es, obs) {
       es.forEach(function (e) {
         if (!e.isIntersecting) return;
@@ -742,7 +752,7 @@ body { letter-spacing: .004em; }
         obs.unobserve(e.target);
       });
     }, { rootMargin: '-45% 0px -35% 0px', threshold: 0 });
-    rest.forEach(function (p) { io.observe(p); });
+    proofs.forEach(function (p) { io.observe(p); });
   }
 
   /* --- folio: marca o capítulo corrente --------------------------- */
@@ -835,6 +845,77 @@ body { letter-spacing: .004em; }
 
   var y = document.getElementById('year');
   if (y) y.textContent = String(new Date().getFullYear());
+}());
+</script>
+<script>
+/* --- herói: a frase sob o nome se escreve, se apaga e troca de termo --- */
+(function () {
+  'use strict';
+  var host = document.querySelector('[data-typer]');
+  if (!host) return;
+  var out = host.querySelector('.typer__text');
+  var phrases = (host.getAttribute('data-phrases') || '').split('|').filter(Boolean);
+  if (!out || phrases.length < 2) return;
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduced.matches) {
+    // Sem movimento: o texto inteiro, de uma vez, legivel e sem caret.
+    out.textContent = phrases.join(' ');
+    host.classList.add('is-static');
+    host.removeAttribute('aria-hidden');
+    var sr = document.querySelector('[data-typer-sr]');
+    if (sr) sr.parentNode.removeChild(sr);
+    return;
+  }
+
+  var TYPE_MS = 30, TYPE_JITTER = 12, ERASE_MS = 16, ERASE_STEP = 2;
+  var HOLD_MS = 1600, GAP_MS = 240, START_MS = 800;
+
+  /* reserva a altura da maior frase */
+  function reserve() {
+    var keep = out.textContent;
+    var max = 0;
+    host.style.minHeight = '';
+    phrases.forEach(function (p) { out.textContent = p; max = Math.max(max, host.offsetHeight); });
+    out.textContent = keep;
+    host.style.minHeight = max + 'px';
+  }
+
+  var visible = true;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: 0 }).observe(host);
+  }
+
+  var i = 0, n = 0, mode = 'type', timer = null;
+  function later(ms) { timer = window.setTimeout(step, ms); }
+  function step() {
+    // pausa fora da tela e com a aba em segundo plano
+    if (!visible || document.hidden) { later(400); return; }
+    var p = phrases[i];
+    if (mode === 'type') {
+      host.classList.add('is-moving');
+      n += 1;
+      out.textContent = p.slice(0, n);
+      if (n >= p.length) { mode = 'erase'; host.classList.remove('is-moving'); later(HOLD_MS); return; }
+      later(TYPE_MS + Math.round(Math.random() * TYPE_JITTER));
+    } else {
+      host.classList.add('is-moving');
+      n = Math.max(0, n - ERASE_STEP);
+      out.textContent = p.slice(0, n);
+      if (n === 0) { mode = 'type'; i = (i + 1) % phrases.length; later(GAP_MS); return; }
+      later(ERASE_MS);
+    }
+  }
+
+  out.textContent = '';
+  var ready = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  ready.then(function () { reserve(); later(START_MS); });
+
+  var rz = null;
+  window.addEventListener('resize', function () {
+    window.clearTimeout(rz);
+    rz = window.setTimeout(reserve, 150);
+  }, { passive: true });
 }());
 </script>
 </body>
