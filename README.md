@@ -25,6 +25,7 @@ CNAME                 paulo.ambrosi.top — não apagar
 sitemap.xml robots.txt
 ```
 
+
 ## Publicar
 
 ```bash
