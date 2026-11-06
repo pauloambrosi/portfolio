@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="no-js">
+<!doctype html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Paulo Ambrosi — Especialista em Moodle e Sistemas EAD</title>
 <meta name="description" content="Analista de Sistemas com 12+ anos em Moodle, ambientes virtuais de aprendizagem e desenvolvimento web em PHP e JavaScript. Salvador, BA.">
 <meta name="author" content="Paulo Ambrosi">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#4F5D3F" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#161A14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1310" media="(prefers-color-scheme: dark)">
 
 <link rel="canonical" href="https://paulo.ambrosi.top/">
 <link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/">
@@ -36,370 +36,622 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=20261026">
-<script>document.documentElement.classList.remove('no-js');try{var t=localStorage.getItem('pa-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="scrollcraft.css?v=20261106">
+<style>
+/* ===========================================================
+   Paulo Ambrosi — floresta de inverno, lida como impresso.
+   Gramática: chaptered editorial. Capítulos cortam duro entre
+   névoa e mata; nada de interpolação de fundo.
+   =========================================================== */
+:root {
+  --sc-canvas:     #F7F5F0;
+  --sc-surface:    #FFFFFF;
+  --sc-ink:        #22261C;
+  --sc-ink-soft:   #59604E;
+  --sc-accent:     #B05023;
+  --sc-accent-ink: #FFFFFF;
+  --sc-font-display: "Fraunces", Georgia, serif;
+  --sc-font-text:    "Inter", system-ui, sans-serif;
+  --sc-font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  /* grounds por capítulo — cortes duros, não gradiente */
+  --paper:     #F7F5F0;
+  --paper-2:   #F1EEE6;
+  --forest:    #1A1F17;
+  --forest-dp: #0F1310;
+  --moss:      #333E2A;
+
+  --ink-dark:      #F2F0EA;   /* tinta sobre fundo escuro */
+  --ink-dark-soft: #B3BCA6;
+  --accent-dark:   #F08A4B;
+  --folio-w: 8.5rem;
+}
+
+/* Fraunces e variavel: SOFT/WONK em 0 deixam o desenho firme em vez de
+   caricato, que e o que a vibe pede. Tracking aberto, nao fechado. */
+h1, h2, h3, .intertitle__t, .plate__name, .peak h3, .colophon__ask, .figure__n,
+.stratum h3, .rail__title {
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+body { letter-spacing: .004em; }
+.measure p, .peak p, .stratum li, .plate__claim, .colophon__ask { line-height: 1.74; }
+.lichen__items span { letter-spacing: .012em; }
+
+/* --- capítulos: cada um carrega seu próprio chão ------------------ */
+.ch { position: relative; }
+.ch--paper   { background: var(--paper);     color: var(--sc-ink); }
+.ch--paper2  { background: var(--paper-2);   color: var(--sc-ink); }
+.ch--forest  { background: var(--forest);    color: var(--ink-dark); }
+.ch--deep    { background: var(--forest-dp); color: var(--ink-dark); }
+.ch--moss    { background: var(--moss);      color: var(--ink-dark); }
+.ch--forest, .ch--deep, .ch--moss { --sc-ink: var(--ink-dark); --sc-ink-soft: var(--ink-dark-soft); --sc-accent: var(--accent-dark); }
+
+.ch__inner { max-width: 72rem; margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 3rem); }
+@media (min-width: 1040px) { .ch__inner { padding-left: calc(var(--folio-w) + 2rem); } }
+
+/* --- intertítulo: a folha de rosto de cada capítulo --------------- */
+.intertitle {
+  display: flex; align-items: baseline; gap: 1rem;
+  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 3vw, 2.5rem);
+  border-bottom: 1px solid currentColor;
+  opacity: .999;
+}
+.intertitle__n {
+  font-family: var(--sc-font-mono); font-size: .78rem; letter-spacing: .18em;
+  color: var(--sc-accent); flex: none;
+}
+.intertitle__t {
+  font-family: var(--sc-font-display); font-weight: 500;
+  font-size: clamp(1.5rem, 1.05rem + 1.8vw, 2.4rem); line-height: 1.08;
+  letter-spacing: .004em; margin: 0;
+}
+
+/* --- folio na margem: a navegação desta gramática ----------------- */
+.folio {
+  position: fixed; left: clamp(1rem, 2.5vw, 2rem); top: 50%;
+  transform: translateY(-50%); z-index: 50;
+  display: none; flex-direction: column; gap: .55rem;
+  width: var(--folio-w);
+  mix-blend-mode: difference; color: #fff;
+}
+@media (min-width: 1040px) { .folio { display: flex; } }
+.folio a {
+  font-family: var(--sc-font-mono); font-size: .68rem; letter-spacing: .1em;
+  text-transform: uppercase; text-decoration: none; color: inherit;
+  opacity: .34; transition: opacity .35s ease, letter-spacing .35s ease;
+  display: flex; gap: .55rem;
+}
+.folio a:hover { opacity: .8; }
+.folio a[aria-current] { opacity: 1; letter-spacing: .16em; }
+/* no capitulo do trilho o conteudo desliza por baixo da margem:
+   o folio recua para nao brigar com o cartao que passa. */
+.folio { transition: opacity .5s ease, transform .5s cubic-bezier(.22,.8,.3,1); }
+.folio.is-withdrawn { opacity: .12; transform: translateY(-50%) translateX(-.4rem); }
+.folio a span { font-variant-numeric: tabular-nums; }
+
+/* --- folha de rosto (cap. 1) -------------------------------------- */
+.plate { padding-block: clamp(5rem, 16vh, 11rem) clamp(4rem, 9vw, 7rem); }
+.plate__name {
+  font-family: var(--sc-font-display); font-weight: 400;
+  font-size: clamp(2.9rem, 1.3rem + 9.4vw, 7.6rem); line-height: .98;
+  letter-spacing: -.004em; margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+}
+.plate__claim { font-size: clamp(1.05rem, 1rem + .45vw, 1.3rem); max-width: 34ch; color: var(--sc-ink-soft); }
+.plate__meta {
+  margin-top: clamp(2.5rem, 6vw, 4rem); display: flex; flex-wrap: wrap; gap: 1.5rem;
+  font-family: var(--sc-font-mono); font-size: .72rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--sc-ink-soft);
+}
+
+/* --- medida estreita contra margem larga (cap. 2) ----------------- */
+.measure { max-width: 54ch; }
+.measure p + p { margin-top: 1.1rem; }
+.measure p { color: var(--sc-ink-soft); font-size: 1.05rem; line-height: 1.68; }
+.record { display: grid; gap: 0; margin-top: clamp(2.5rem, 6vw, 4rem); }
+.record__row {
+  display: grid; grid-template-columns: 6.5rem 1fr; gap: 1.5rem;
+  padding-block: 1.1rem; border-top: 1px solid var(--sc-hairline-strong);
+  align-items: baseline;
+}
+.record__row:last-child { border-bottom: 1px solid var(--sc-hairline-strong); }
+.record__k { font-family: var(--sc-font-mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--sc-accent); }
+.record__v { font-size: .98rem; }
+.record__v small { display: block; color: var(--sc-ink-soft); font-size: .85rem; margin-top: .15rem; }
+
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(3rem, 7vw, 5rem); }
+.figure__n {
+  font-family: var(--sc-font-display); font-size: clamp(2.4rem, 1.7rem + 2.7vw, 3.8rem);
+  line-height: 1; letter-spacing: -.002em; color: var(--sc-accent);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.figure__suf { font-size: .46em; margin-left: .22em; letter-spacing: .02em; }
+.figure__l { margin-top: .5rem; font-size: .85rem; color: var(--sc-ink-soft); max-width: 18ch; }
+
+/* --- campo de líquen (cap. 3, o capítulo silencioso) -------------- */
+.lichen { display: grid; gap: clamp(2rem, 5vw, 3.2rem); margin-top: clamp(2.5rem, 6vw, 4rem); }
+.lichen__group { display: grid; grid-template-columns: 9rem 1fr; gap: 1.5rem; align-items: start; }
+@media (max-width: 700px) { .lichen__group { grid-template-columns: 1fr; gap: .6rem; } }
+.lichen__k { font-family: var(--sc-font-mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--sc-ink-soft); padding-top: .35rem; }
+.lichen__items { display: flex; flex-wrap: wrap; gap: .45rem 1.1rem; }
+.lichen__items span { font-size: .95rem; color: var(--sc-ink); }
+.lichen__items span::after { content: "·"; margin-left: 1.1rem; color: var(--sc-ink-soft); opacity: .5; }
+.lichen__items span:last-child::after { content: ""; }
+
+/* --- o pico: coluna de mídia em camadas (cap. 4) ------------------ */
+.peak { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; min-height: 100svh; padding-block: clamp(3rem, 8vw, 6rem); }
+@media (max-width: 900px) { .peak { grid-template-columns: 1fr; min-height: 0; } }
+.peak__kicker { font-family: var(--sc-font-mono); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sc-accent); margin-bottom: 1.2rem; }
+.peak h3 { font-family: var(--sc-font-display); font-weight: 500; font-size: clamp(1.9rem, 1.25rem + 2.4vw, 3.1rem); line-height: 1.1; letter-spacing: .002em; margin: 0 0 1.2rem; }
+.peak p { color: var(--sc-ink-soft); max-width: 46ch; line-height: 1.68; }
+.peak__tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.6rem; }
+.peak__tags span { font-family: var(--sc-font-mono); font-size: .68rem; padding: .28rem .6rem; border: 1px solid var(--sc-hairline-strong); border-radius: 4px; color: var(--sc-ink-soft); }
+.peak__link { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.8rem; font-weight: 600; font-size: .95rem; color: var(--sc-accent); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: .15rem; }
+
+.planes { position: relative; aspect-ratio: 4 / 3.4; }
+.planes img {
+  position: absolute; border-radius: 6px;
+  max-width: none; height: auto;          /* o atributo height do HTML venceria sem isto */
+  box-shadow: 0 34px 80px -28px rgba(0,0,0,.8);
+  border: 1px solid rgba(255,255,255,.12);
+  will-change: transform;
+}
+.planes__back  { width: 72%; top: 0;      right: 0; }
+.planes__mid   { width: 66%; top: 31%;    left: 0;   z-index: 2; }
+.planes__front { width: 54%; bottom: 2%;  right: 4%; z-index: 3; }
+.planes__floor { position: absolute; inset: auto 0 0 0; height: 90px; background: linear-gradient(to bottom, transparent, var(--forest-dp)); pointer-events: none; }
+.planes__cap { margin-top: 1rem; font-family: var(--sc-font-mono); font-size: .68rem; color: var(--ink-dark-soft); letter-spacing: .04em; }
+@media (max-width: 900px) { .planes { aspect-ratio: 4 / 3.4; } }
+
+
+
+/* --- a regra do intertitulo se desenha quando o capitulo entra -------- */
+.intertitle { border-bottom: 0; position: relative; }
+.intertitle::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 1px; background: currentColor; opacity: .55;
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 1.1s cubic-bezier(.22,.8,.3,1);
+}
+.intertitle.is-drawn::after { transform: scaleX(1); }
+
+/* --- os grupos de tags deslizam de leve ao entrar --------------------- */
+.lichen__group { transition: transform .9s cubic-bezier(.22,.8,.3,1); }
+
+/* --- as linhas de estrato entram uma a uma --------------------------- */
+.stratum { opacity: 0; transform: translateY(16px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.22,.8,.3,1); }
+.stratum.is-in { opacity: 1; transform: none; }
+
+/* --- fio de progresso no topo ---------------------------------------- */
+.thread { position: fixed; inset: 0 auto auto 0; height: 2px; z-index: 60;
+  background: var(--sc-accent); width: 0; opacity: .85; }
+
+@media (prefers-reduced-motion: reduce) {
+  .folio { transition: none; }
+  .intertitle::after { transform: scaleX(1); transition: none; }
+  .stratum { opacity: 1; transform: none; transition: none; }
+  .lichen__group { transition: none; }
+  .thread { display: none; }
+}
+
+
+/* --- escalonamento item a item: cada filho entra depois do anterior ---- */
+[data-stagger-items] > * {
+  opacity: 0; transform: translateY(10px);
+  transition: opacity .55s ease, transform .55s cubic-bezier(.22,.8,.3,1);
+  transition-delay: calc(var(--i, 0) * 45ms);
+}
+[data-stagger-items].is-staggered > * { opacity: 1; transform: none; }
+.rail[data-stagger-items] > * { transform: translateY(18px); }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-stagger-items] > * { opacity: 1 !important; transform: none !important; transition: none; }
+}
+
+/* --- trilho lateral (cap. 5): largura reads como leque de opcoes -------- */
+.rail {
+  display: flex; align-items: center; gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+  height: 100%;
+}
+/* o folio e fixo na margem: o trilho precisa reservar a calha dele, senao
+   o primeiro cartao desliza por baixo da navegacao. */
+@media (min-width: 1040px) {
+  .rail { padding-left: calc(var(--folio-w) + 2rem); }
+}
+.rail > * { flex: 0 0 clamp(15rem, 25vw, 23rem); }
+.rail__lead { flex: 0 0 clamp(18rem, 30vw, 27rem); }
+.rail__lead p { color: var(--sc-ink-soft); line-height: 1.74; }
+.rail__title {
+  font-family: var(--sc-font-display); font-weight: 500;
+  font-size: clamp(1.9rem, 1.25rem + 2.4vw, 3.1rem); line-height: 1.1;
+  letter-spacing: .002em; margin: 0 0 1rem;
+}
+.rail__card { margin: 0; }
+.rail__card img {
+  width: 100%; height: auto; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 30px 70px -30px rgba(0,0,0,.8);
+}
+.rail__card figcaption {
+  margin-top: .9rem; font-size: .88rem; color: var(--sc-ink-soft);
+  line-height: 1.6; max-width: 40ch;
+}
+.rail__card figcaption b { color: var(--ink-dark); font-weight: 600; }
+@media (max-width: 760px) {
+  .rail > * { flex: 0 0 min(80vw, 22rem); }
+}
+
+/* --- estratos (cap. 6 e 7) -------------------------------------------- */
+.strata { margin-top: clamp(2rem, 5vw, 3.5rem); }
+.stratum { display: grid; grid-template-columns: 9rem 1fr; gap: 1.5rem; padding-block: clamp(1.4rem, 3vw, 2.2rem); border-top: 1px solid var(--sc-hairline-strong); }
+@media (max-width: 700px) { .stratum { grid-template-columns: 1fr; gap: .5rem; } }
+.stratum__when { font-family: var(--sc-font-mono); font-size: .7rem; letter-spacing: .08em; color: var(--sc-accent); padding-top: .3rem; }
+.stratum h3 { font-family: var(--sc-font-display); font-weight: 500; font-size: clamp(1.25rem, 1.05rem + .85vw, 1.7rem); margin: 0 0 .2rem; letter-spacing: .004em; line-height: 1.2; }
+.stratum__where { font-size: .88rem; color: var(--sc-ink-soft); margin-bottom: .8rem; }
+.stratum ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .35rem; }
+.stratum li { font-size: .95rem; color: var(--sc-ink-soft); padding-left: 1rem; position: relative; }
+.stratum li::before { content: ""; position: absolute; left: 0; top: .62em; width: 4px; height: 4px; background: var(--sc-accent); }
+
+.shotrow {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem); margin-top: 1.4rem; max-width: 46rem;
+}
+.shotpair { margin: 0; }
+.shotpair img {
+  width: 100%; height: auto; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 18px 40px -20px rgba(0,0,0,.7);
+}
+.shotpair figcaption { margin-top: .6rem; font-size: .76rem; line-height: 1.5; color: var(--sc-ink-soft); }
+.stratum--wide > div { max-width: 56rem; }
+
+/* --- colofão (cap. 6) --------------------------------------------- */
+.colophon { padding-block: clamp(4rem, 10vw, 7rem) clamp(3rem, 7vw, 5rem); }
+.colophon__ask { font-family: var(--sc-font-display); font-weight: 500; font-size: clamp(1.45rem, 1.05rem + 1.6vw, 2.2rem); line-height: 1.38; max-width: 28ch; margin: 0 0 clamp(2rem, 5vw, 3rem); letter-spacing: .006em; }
+.colophon__ask a { color: var(--sc-accent); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.colophon__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.5rem clamp(1.5rem, 4vw, 3rem); border-top: 1px solid var(--sc-hairline-strong); padding-top: 1.75rem; }
+.colophon__k { font-family: var(--sc-font-mono); font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-dark-soft); margin-bottom: .3rem; }
+.colophon__grid a { color: var(--ink-dark); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.25); font-size: .95rem; }
+.colophon__grid a:hover { border-bottom-color: var(--accent-dark); color: var(--accent-dark); }
+.colophon__foot { margin-top: clamp(2.5rem, 6vw, 4rem); display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; font-family: var(--sc-font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dark-soft); }
+.colophon__foot nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.colophon__foot a { color: inherit; text-decoration: none; }
+.colophon__foot a:hover { color: var(--accent-dark); }
+
+/* ===========================================================
+   SIGNATURE MOVE — "marcas de revisão"
+   A página é um manuscrito em prova. O scroll é a passada do
+   revisor: a variante riscada cai, a aceita assenta.
+   =========================================================== */
+.proof { position: relative; }
+.proof__out {
+  color: var(--sc-ink-soft); text-decoration: line-through;
+  text-decoration-color: var(--sc-accent); text-decoration-thickness: 1px;
+  opacity: .85; margin-right: .38em;
+  display: inline-block; white-space: nowrap;
+  /* a tinta sai primeiro, o espaco fecha depois: senao o riscado espreme
+     e o quadro do meio fica ilegivel. */
+  transition: opacity .22s ease, transform .3s cubic-bezier(.4,0,.2,1),
+              max-width .42s cubic-bezier(.4,0,.2,1) .16s,
+              margin-right .42s cubic-bezier(.4,0,.2,1) .16s;
+  max-width: 24ch; overflow: hidden; vertical-align: bottom;
+}
+.proof__in {
+  font-weight: 400; opacity: .5;
+  transition: opacity .55s ease .12s, font-weight .55s ease .12s;
+}
+.proof__mark {
+  font-family: var(--sc-font-mono); font-size: .62em; color: var(--sc-accent);
+  vertical-align: super; margin-left: .25em; opacity: .9;
+  /* inline-block com largura animavel: so opacity deixaria um buraco na frase
+     depois que a marca some. */
+  display: inline-block; max-width: 4ch; overflow: hidden;
+  transition: opacity .3s ease .25s,
+              max-width .35s cubic-bezier(.4,0,.2,1) .35s,
+              margin-left .35s cubic-bezier(.4,0,.2,1) .35s;
+}
+.proof.is-resolved .proof__out { opacity: 0; transform: translateY(-.35em) scale(.9); max-width: 0; margin-right: 0; }
+.proof.is-resolved .proof__in  { opacity: 1; font-weight: 600; }
+.proof.is-resolved .proof__mark { opacity: 0; max-width: 0; margin-left: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* O manuscrito já chega limpo. Resultado semântico correto, não degradação. */
+  .proof__out, .proof__mark { display: none; }
+  .proof__in { opacity: 1; font-weight: 600; }
+  .proof__out, .proof__in, .proof__mark { transition: none; }
+}
+
+.skip { position: absolute; left: .75rem; top: -100px; z-index: 200; background: var(--sc-accent); color: #fff; padding: .7rem 1.1rem; border-radius: 8px; font-weight: 600; text-decoration: none; }
+.skip:focus { top: .75rem; }
+:focus-visible { outline: 2.5px solid var(--sc-accent); outline-offset: 3px; }
+.ch--forest :focus-visible, .ch--deep :focus-visible, .ch--moss :focus-visible { outline-color: var(--accent-dark); }
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Pular para o conteúdo</a>
 
-<header class="header" id="header">
-  <div class="wrap header__inner">
-    <a class="brand" href="index.html">
-      <span class="brand__mark" aria-hidden="true">PA</span>
-      <span>Paulo Ambrosi</span>
-    </a>
+<span data-sc-progress></span>
+<div class="sc-grain" aria-hidden="true"></div>
+<div class="thread" id="thread" aria-hidden="true"></div>
+<a class="skip" href="#cap1">Pular para o conteúdo</a>
 
-    <nav class="nav" id="nav" aria-label="Seções do site">
-      <a class="nav__link" href="#sobre">Sobre</a>
-      <a class="nav__link" href="#habilidades">Habilidades</a>
-      <a class="nav__link" href="#projetos">Projetos</a>
-      <a class="nav__link" href="ia/index.html">IA</a>
-      <a class="nav__link" href="#experiencia">Experiência</a>
-      <a class="nav__link" href="#contato">Contato</a>
-    </nav>
+<nav class="folio" id="folio" aria-label="Capítulos">
+  <a href="#cap1"><span>01</span> Descrição</a>
+  <a href="#cap2"><span>02</span> Currículo</a>
+  <a href="#cap3"><span>03</span> Tags</a>
+  <a href="#cap4"><span>04</span> FLOW</a>
+  <a href="#cap5"><span>05</span> SENAI Class</a>
+  <a href="#cap6"><span>06</span> Moodle</a>
+  <a href="#cap7"><span>07</span> Experiência</a>
+  <a href="#cap8"><span>08</span> Contato</a>
+</nav>
 
-    <div class="header__tools">
-      <div class="langswitch">
-        <a href="index.html" aria-current="page" hreflang="pt-BR" lang="pt-BR">PT</a>
-        <a href="en/index.html" hreflang="en" lang="en">EN</a>
-      </div>
-      <button class="iconbtn" id="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
-      <button class="iconbtn navtoggle" id="nav-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
+<main>
+
+<!-- ============ 01 · DESCRIÇÃO — folha de rosto · in + signature ============ -->
+<section class="ch ch--paper" id="cap1" data-sc-act="flow">
+  <div class="ch__inner plate" data-sc-in data-sc-stagger="70">
+    <h1 class="plate__name" data-sc-parallax="-0.08">Paulo Ambrosi</h1>
+    <p class="plate__claim">Analista de Sistemas. Construo, customizo e mantenho
+      <span class="proof"><span class="proof__out">sistemas</span><span class="proof__in">ambientes virtuais de aprendizagem</span><span class="proof__mark">rev</span></span>
+      — do plugin Moodle ao sistema de autoria que organiza a produção de um curso inteiro.</p>
+    <p class="plate__meta">
+      <span>Salvador · Bahia</span><span>12+ anos</span><span>SENAI CETIND</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 02 · CURRÍCULO — count ============ -->
+<section class="ch ch--forest" id="cap2" data-sc-act="flow">
+  <div class="ch__inner">
+    <div class="intertitle"><span class="intertitle__n">02</span><h2 class="intertitle__t">Currículo</h2></div>
+  </div>
+  <div class="ch__inner" style="padding-bottom:clamp(4rem,9vw,7rem)">
+    <div class="measure" data-sc-in data-sc-stagger="60" style="margin-top:clamp(2.5rem,6vw,4rem)">
+      <p>Analista de Sistemas com mais de 12 anos de experiência em desenvolvimento web, ambientes virtuais de aprendizagem e tecnologias educacionais. Atuo no SENAI CETIND desenvolvendo sistemas em PHP, JavaScript, MySQL e APIs REST, além da administração, customização e evolução de plataformas Moodle.</p>
+      <p>Tenho experiência na criação de jogos e simuladores educacionais com Adobe Animate, HTML5 e JavaScript, bem como na implementação de ambientes de aprendizagem para instituições nacionais e internacionais, incluindo projetos desenvolvidos em parceria com a OEI, universidades e órgãos governamentais.</p>
+    </div>
+
+    <div class="record" data-sc-in data-sc-stagger="50">
+      <div class="record__row"><span class="record__k">Formação</span><span class="record__v">Sistemas de Informação<small>Universidade Salvador (UNIFACS) · 2013–2018</small></span></div>
+      <div class="record__row"><span class="record__k">Técnico</span><span class="record__v">Desenvolvimento Web<small>SENAI Bahia · 2012–2013</small></span></div>
+      <div class="record__row"><span class="record__k">Foco</span><span class="record__v">Moodle, EAD e tecnologias educacionais com IA<small>Ambientes para instituições públicas e internacionais</small></span></div>
+    </div>
+
+    <div class="figures" data-sc-in data-sc-stagger="110">
+      <div><div class="figure__n" data-sc-count="0 12" data-sc-count-at="0.02 0.13">12</div><div class="figure__l">anos em tecnologia educacional</div></div>
+      <div><div class="figure__n"><span data-sc-count="0 145" data-sc-count-at="0.02 0.13">145</span><span class="figure__suf">mil</span></div><div class="figure__l">alunos cadastrados no AVA do SENAI Bahia</div></div>
+      <div><div class="figure__n" data-sc-count="0 1058" data-sc-count-at="0.02 0.13">1058</div><div class="figure__l">alunos no Observatório ObsPLE-PL2</div></div>
+      <div><div class="figure__n" data-sc-count="0 5" data-sc-count-at="0.02 0.13">5</div><div class="figure__l">projetos selecionados</div></div>
+      <div><div class="figure__n" data-sc-count="0 3" data-sc-count-at="0.02 0.13">3</div><div class="figure__l">edições do curso do Observatório</div></div>
     </div>
   </div>
-</header>
+</section>
 
-<main id="main">
+<!-- ============ 03 · TAGS — reveal · o capítulo silencioso ============ -->
+<section class="ch ch--paper2" id="cap3">
+  <div class="ch__inner">
+    <div class="intertitle"><span class="intertitle__n">03</span><h2 class="intertitle__t">Tags</h2></div>
+  </div>
+  <div class="ch__inner" style="padding-bottom:clamp(4rem,9vw,7rem)">
+    <div class="lichen">
+      <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.02 0.3">
+        <span class="lichen__k">LMS &amp; EAD</span>
+        <div class="lichen__items" data-stagger-items><span>Moodle</span><span>Administração de LMS</span><span>Plugins Moodle</span><span>Temas Moodle</span><span>SCORM</span><span>Migração de versão</span><span>Relatórios e BI do LMS</span><span>Educação a Distância</span></div>
+      </div>
+      <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.12 0.4">
+        <span class="lichen__k">Backend</span>
+        <div class="lichen__items" data-stagger-items><span>PHP</span><span>MySQL</span><span>REST API</span><span>Integrações de sistemas</span></div>
+      </div>
+      <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.22 0.5">
+        <span class="lichen__k">Frontend</span>
+        <div class="lichen__items" data-stagger-items><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Adobe Animate</span><span>CreateJS</span></div>
+      </div>
+      <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.32 0.6">
+        <span class="lichen__k">IA aplicada</span>
+        <div class="lichen__items" data-stagger-items><span>OpenAI API</span><span>Responses API</span><span>Structured output</span><span>Streaming SSE</span><span>Engenharia de prompt</span><span>Geração de imagem</span><span>Controle de custo de IA</span><span>n8n</span></div>
+      </div>
+      <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.42 0.7">
+        <span class="lichen__k">Dev assistido</span>
+        <div class="lichen__items" data-stagger-items><span>Claude Code</span><span>MCP</span><span>Skills e hooks</span><span>Spec-driven development</span><span>Grafo de código</span><span>Revisão assistida por IA</span></div>
+      </div>
+      <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.52 0.8">
+        <span class="lichen__k">Processo &amp; automação</span>
+        <div class="lichen__items" data-stagger-items><span>Gestão de projetos com IA</span><span>Automação</span><span>Agentes de IA</span><span>Pesquisa</span><span>Resolução de problemas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero__grid">
+<!-- ============ 04 · PROJETOS — PICO · pin + parallax ============ -->
+<section class="ch ch--deep" id="cap4" data-sc-act="pin" data-sc-span="3.4" data-sc-dwell="0.1">
+  <div data-sc-stage>
+    <div class="ch__inner peak">
+      <div data-sc-cue="0 1 0">
+        <p class="peak__kicker">04 · Projeto em destaque</p>
+        <h3>FLOW</h3>
+        <p>Sistema que acompanha uma aula EAD do plano de aula à entrega final, passando por conteúdo, revisão, design educacional, ilustração, diagramação, audiovisual e desenvolvimento. Exporta em SCORM, PDF, DOCX e IDML.</p>
+        <p style="margin-top:1rem">Dentro dele, a
+          <span class="proof"><span class="proof__out">IA escreve</span><span class="proof__in">IA propõe e uma pessoa decide</span><span class="proof__mark">rev</span></span>.</p>
+        <div class="peak__tags"><span>PHP 8.2</span><span>MySQL</span><span>JavaScript</span><span>OpenAI API</span><span>SCORM 1.2</span></div>
+        <a class="peak__link" href="flow/index.html">Ver o case completo →</a>
+      </div>
+      <div>
+        <div class="planes">
+          <img class="planes__back"  data-sc-parallax="-0.46" src="assets/flow/editor-secoes.jpg" width="1600" height="1000" alt="Editor de aulas do FLOW com os blocos da estrutura e o painel de tipos de seção" loading="lazy">
+          <img class="planes__mid"   data-sc-parallax="-0.28" src="assets/flow/fluxo-status.jpg" width="1600" height="1000" alt="Lista de aulas de uma unidade curricular, com o perfil responsável por cada uma" loading="lazy">
+          <img class="planes__front" data-sc-parallax="-0.12" src="assets/flow/minhas-aulas.jpg" width="1600" height="1000" alt="Tela Minhas Aulas do FLOW, a fila de aulas do usuário em cards" loading="lazy">
+          <span class="planes__floor" aria-hidden="true"></span>
+        </div>
+        <p class="planes__cap">FLOW, ambiente de demonstração. SENAI Bahia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · SENAI CLASS — pan (trilho lateral) ============ -->
+<section class="ch ch--forest" id="cap5" data-sc-act="pan" data-sc-span="2.5">
+  <div data-sc-stage>
+    <div class="rail" data-sc-pan="0.04" data-stagger-items>
+      <div class="rail__lead">
+        <p class="peak__kicker">05 · Projeto</p>
+        <h3 class="rail__title">SENAI&nbsp;Class</h3>
+        <p>Ferramenta para o professor levar atividade gamificada para a sala: quiz, situação de aprendizagem e aula interativa, com ranking e histórico. A IA escreve a primeira versão; quem decide é o professor.</p>
+        <div class="peak__tags"><span>PHP</span><span>MySQL</span><span>OpenAI API</span><span>Entra ID</span></div>
+        <a class="peak__link" href="ia/index.html#senaiclass">Ver o trabalho com IA →</a>
+      </div>
+
+      <figure class="rail__card">
+        <img src="assets/senaiclass/login.jpg" width="1400" height="1044" alt="Tela de entrada do SENAI Class, com acesso institucional para o professor e entrada por PIN para o aluno" loading="lazy">
+        <figcaption><b>Duas portas.</b> O professor entra pela conta institucional; o aluno entra só com o PIN da sala.</figcaption>
+      </figure>
+
+      <figure class="rail__card">
+        <img src="assets/senaiclass/recursos.jpg" width="1400" height="1049" alt="Tela Meus Recursos do SENAI Class, com cards de quiz e de aula interativa criados pelo professor" loading="lazy">
+        <figcaption><b>Os recursos do professor.</b> Quiz, revisão e aula interativa, cada um com turma e contagem de questões.</figcaption>
+      </figure>
+
+      <figure class="rail__card">
+        <img src="assets/senaiclass/ia-criando.jpg" width="1400" height="1048" alt="Modal do SENAI Class com a mensagem Criando a situação de aprendizagem, enquanto a IA monta o material" loading="lazy">
+        <figcaption><b>A IA propõe.</b> O professor dá o tema e a IA monta a situação de aprendizagem inteira. O aviso é explícito: dá para revisar tudo antes de salvar.</figcaption>
+      </figure>
+
+      <figure class="rail__card">
+        <img src="assets/senaiclass/sa-capa.jpg" width="1400" height="1041" alt="Slide de abertura de uma situação de aprendizagem gerada, com fotografia em tela cheia e o título Utilização de IA" loading="lazy">
+        <figcaption><b>O resultado, em tela cheia.</b> A situação de aprendizagem abre como uma apresentação, pronta para o projetor.</figcaption>
+      </figure>
+
+      <figure class="rail__card">
+        <img src="assets/senaiclass/sa-contexto.jpg" width="1400" height="1044" alt="Slide de contexto de uma situação de aprendizagem gerada, com texto sobre uso de IA em um almoxarifado e imagem de apoio" loading="lazy">
+        <figcaption><b>E uma pessoa decide.</b> Contexto, imagem e a pergunta que abre a discussão. O professor revisa antes de projetar.</figcaption>
+      </figure>
+
+      <figure class="rail__card">
+        <img src="assets/senaiclass/sala.jpg" width="1400" height="1046" alt="Sala de espera do SENAI Class, com PIN e QR code para os alunos entrarem na atividade" loading="lazy">
+        <figcaption><b>A sala abre.</b> PIN e QR na tela, a turma entra pelo celular e quem chega depois ainda alcança.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · AMBIENTES MOODLE — reveal ============ -->
+<section class="ch ch--forest" id="cap6">
+  <div class="ch__inner">
+    <div class="intertitle"><span class="intertitle__n">06</span><h2 class="intertitle__t">Ambientes Moodle</h2></div>
+  </div>
+  <div class="ch__inner" style="padding-bottom:clamp(4rem,9vw,7rem)">
+    <div class="strata" data-sc-in data-sc-stagger="70">
+      <div class="stratum stratum--wide">
+        <span class="stratum__when">SENAI Bahia</span>
         <div>
-          <p class="eyebrow" data-reveal>Salvador, Bahia · Brasil</p>
-          <h1 class="hero__title" data-reveal style="--i:1">Paulo Ambrosi</h1>
-          <p class="hero__role" data-reveal style="--i:2">Analista de Sistemas · <b>PHP</b> · <b>JavaScript</b> · <b>Moodle</b> · Jogos e Simuladores Educacionais</p>
-          <p class="hero__pitch" data-reveal style="--i:3">Construo, customizo e mantenho ambientes virtuais de aprendizagem — do plugin Moodle ao sistema de autoria que organiza a produção de um curso inteiro.</p>
-          <div class="hero__actions" data-reveal style="--i:4">
-            <a class="btn btn--primary" href="flow/index.html">
-              Conhecer o FLOW
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a class="btn btn--ghost" href="#contato">Falar comigo</a>
+          <h3>AVA do SENAI Bahia</h3><p class="stratum__where">Oferta EAD do SENAI Bahia, desde 2015</p>
+          <ul><li>O Moodle onde os cursos a distância do SENAI Bahia são ofertados. Em operação desde 2015, hoje com <b>145 mil alunos cadastrados</b> e centenas de cursos no ar. É também o destino dos pacotes SCORM que saem do FLOW.</li></ul>
+          <div class="shotrow">
+            <figure class="shotpair">
+              <img src="assets/moodle-prints/senai-entrada.jpg" width="1100" height="627" alt="Tela de entrada do AVA do SENAI, com o formulário de acesso e um vídeo explicando como entrar na plataforma" loading="lazy">
+              <figcaption>A entrada, com o tutorial de primeiro acesso ao lado do login.</figcaption>
+            </figure>
+            <figure class="shotpair">
+              <img src="assets/moodle-prints/senai-painel.jpg" width="1400" height="797" alt="Painel do Moodle do SENAI Bahia, com acesso rápido, próximas atividades, visão geral e calendário" loading="lazy">
+              <figcaption>O painel do aluno, com acesso rápido, atividades e calendário.</figcaption>
+            </figure>
           </div>
-          <p class="hero__meta" data-reveal style="--i:5">
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Salvador, BA
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
-              12+ anos de experiência
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/></svg>
-              SENAI CETIND
-            </span>
-          </p>
         </div>
+      </div>
 
-        <figure class="hero__portrait" data-reveal style="--i:2">
-          <img src="assets/profile.jpg" width="536" height="536" alt="Retrato de Paulo Ambrosi" fetchpriority="high">
-        </figure>
+      <div class="stratum stratum--wide">
+        <span class="stratum__when">CNPq · IILP</span>
+        <div><h3>ObsPLE-PL2</h3><p class="stratum__where">Observatório de Português como Língua Estrangeira</p>
+        <ul><li>Ambiente Virtual de Aprendizagem para uma rede internacional vinculada ao CNPq e ao IILP/CPLP. Personalização do Moodle, diagramação dos conteúdos e melhorias de navegação. Três edições do curso, 1.058 alunos.</li></ul>
+          <div class="shotrow">
+            <figure class="shotpair">
+              <img src="assets/moodle-prints/obsple-entrada.jpg" width="1400" height="796" alt="Página de entrada do Observatório de Português Língua Estrangeira, com acesso à plataforma e os blocos de apresentação do curso" loading="lazy">
+              <figcaption>A entrada, com o acesso e a apresentação do curso.</figcaption>
+            </figure>
+            <figure class="shotpair">
+              <img src="assets/moodle-prints/obsple-cursos.jpg" width="1100" height="633" alt="Lista de cursos do Observatório PLE-PL2, com as edições do curso Português Pluricêntrico em cartões coloridos" loading="lazy">
+              <figcaption>As edições do Português Pluricêntrico, cada uma com seu ambiente.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="stratum">
+        <span class="stratum__when">MJ · OEI</span>
+        <div><h3>Projeto (Re)Integro</h3><p class="stratum__where">Ministério da Justiça e OEI</p>
+        <ul><li>AVA para ações de formação e reintegração social. Construção e configuração da plataforma Moodle e organização do ambiente educacional.</li></ul></div>
+      </div>
+      <div class="stratum">
+        <span class="stratum__when">UFRGS · OEI</span>
+        <div><h3>Cruzando Fronteiras</h3><p class="stratum__where">Universidade Federal do Rio Grande do Sul</p>
+        <ul><li>AVA para o projeto Cruzando Fronteiras. Construção, customização e configuração do Moodle para oferta de cursos e acompanhamento dos participantes.</li></ul></div>
       </div>
     </div>
-  </section>
-
-  <!-- ===== Sobre ===== -->
-  <section class="section section--tint" id="sobre" aria-labelledby="sobre-t">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Sobre</p>
-        <h2 id="sobre-t">Tecnologia educacional, da infraestrutura à sala de aula</h2>
-      </div>
-
-      <div class="about">
-        <div class="about__body" data-reveal>
-          <p>Analista de Sistemas com mais de 12 anos de experiência em desenvolvimento web, ambientes virtuais de aprendizagem e tecnologias educacionais. Atuo no SENAI CETIND desenvolvendo sistemas em PHP, JavaScript, MySQL e APIs REST, além da administração, customização e evolução de plataformas Moodle.</p>
-          <p>Tenho experiência na criação de jogos e simuladores educacionais com Adobe Animate, HTML5 e JavaScript, bem como na implementação de ambientes de aprendizagem para instituições nacionais e internacionais, incluindo projetos desenvolvidos em parceria com a OEI, universidades e órgãos governamentais.</p>
-        </div>
-
-        <div class="factlist" data-reveal style="--i:1">
-          <div class="factlist__item">
-            <span class="factlist__k">Formação</span>
-            <span class="factlist__v">Sistemas de Informação<small>Universidade Salvador (UNIFACS) · 2013–2018</small></span>
-          </div>
-          <div class="factlist__item">
-            <span class="factlist__k">Técnico</span>
-            <span class="factlist__v">Desenvolvimento Web<small>SENAI Bahia · 2012–2013</small></span>
-          </div>
-          <div class="factlist__item">
-            <span class="factlist__k">Foco</span>
-            <span class="factlist__v">Moodle, EAD e simuladores<small>Ambientes para instituições públicas e internacionais</small></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="stats" data-reveal style="--i:2">
-        <div class="stat">
-          <div class="stat__num" data-count="12" data-suffix="+">12+</div>
-          <div class="stat__label">anos em tecnologia educacional</div>
-        </div>
-        <div class="stat">
-          <div class="stat__num" data-count="1058">1.058</div>
-          <div class="stat__label">alunos no Observatório ObsPLE-PL2</div>
-        </div>
-        <div class="stat">
-          <div class="stat__num" data-count="5">5</div>
-          <div class="stat__label">projetos selecionados no portfólio</div>
-        </div>
-        <div class="stat">
-          <div class="stat__num" data-count="3">3</div>
-          <div class="stat__label">edições do curso do Observatório</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Habilidades ===== -->
-  <section class="section" id="habilidades" aria-labelledby="hab-t">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Habilidades</p>
-        <h2 id="hab-t">O que eu uso no dia a dia</h2>
-        <p class="section__lead">Filtre por área para ver o conjunto que interessa.</p>
-      </div>
-
-      <div class="filters" role="group" aria-label="Filtrar habilidades por área" data-filter-group>
-        <button class="filter" type="button" data-filter="all" aria-pressed="true">Todas</button>
-        <button class="filter" type="button" data-filter="lms" aria-pressed="false">LMS &amp; EAD</button>
-        <button class="filter" type="button" data-filter="backend" aria-pressed="false">Backend</button>
-        <button class="filter" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
-        <button class="filter" type="button" data-filter="ia" aria-pressed="false">IA aplicada</button>
-        <button class="filter" type="button" data-filter="devia" aria-pressed="false">Dev assistido por IA</button>
-        <button class="filter" type="button" data-filter="soft" aria-pressed="false">Processo</button>
-      </div>
-
-      <div class="chips" id="chips" data-reveal>
-        <span class="chip" data-tags="lms">Moodle</span>
-        <span class="chip" data-tags="lms">Administração de LMS</span>
-        <span class="chip" data-tags="lms">Plugins Moodle</span>
-        <span class="chip" data-tags="lms">Temas Moodle</span>
-        <span class="chip" data-tags="lms">SCORM</span>
-        <span class="chip" data-tags="lms">Migração de versão</span>
-        <span class="chip" data-tags="lms">Relatórios e BI do LMS</span>
-        <span class="chip" data-tags="lms">Educação a Distância</span>
-        <span class="chip" data-tags="backend">PHP</span>
-        <span class="chip" data-tags="backend">MySQL</span>
-        <span class="chip" data-tags="backend lms">REST API</span>
-        <span class="chip" data-tags="backend lms">Integrações de sistemas</span>
-        <span class="chip" data-tags="frontend">JavaScript</span>
-        <span class="chip" data-tags="frontend">HTML5</span>
-        <span class="chip" data-tags="frontend">CSS3</span>
-        <span class="chip" data-tags="frontend">Adobe Animate</span>
-        <span class="chip" data-tags="frontend">CreateJS</span>
-        <span class="chip" data-tags="ia">OpenAI API</span>
-        <span class="chip" data-tags="ia">Responses API</span>
-        <span class="chip" data-tags="ia">Structured output (JSON Schema)</span>
-        <span class="chip" data-tags="ia">Streaming SSE</span>
-        <span class="chip" data-tags="ia">Engenharia de prompt</span>
-        <span class="chip" data-tags="ia">Geração de imagem</span>
-        <span class="chip" data-tags="ia">Controle de custo de IA</span>
-        <span class="chip" data-tags="ia">n8n</span>
-        <span class="chip" data-tags="devia">Claude Code</span>
-        <span class="chip" data-tags="devia">MCP</span>
-        <span class="chip" data-tags="devia">Skills e hooks</span>
-        <span class="chip" data-tags="devia">Spec-driven development</span>
-        <span class="chip" data-tags="devia">Grafo de código</span>
-        <span class="chip" data-tags="devia">Revisão assistida por IA</span>
-        <span class="chip" data-tags="soft">Pesquisa</span>
-        <span class="chip" data-tags="soft">Resolução de problemas</span>
-      </div>
-
-      <p class="filter-count" id="filter-count" role="status" aria-live="polite"></p>
-    </div>
-  </section>
-
-  <!-- ===== Projetos ===== -->
-  <section class="section section--tint" id="projetos" aria-labelledby="proj-t">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Projetos</p>
-        <h2 id="proj-t">Projetos selecionados</h2>
-        <p class="section__lead">Dois sistemas construídos do zero e três ambientes virtuais de aprendizagem para instituições nacionais e internacionais.</p>
-      </div>
-
-      <div class="projects">
-        <article class="card card--feature" data-reveal>
-          <div>
-            <p class="eyebrow">Destaque · Sistema próprio</p>
-            <p class="card__org">SENAI Bahia</p>
-            <h3 class="card__title"><a href="flow/index.html">FLOW — Sistema de Autoria e Gestão de Conteúdo</a></h3>
-            <p>Plataforma de autoria e gestão de conteúdo educacional criada para centralizar e otimizar a produção dos cursos EAD do SENAI Bahia. Reúne conteudistas, designers instrucionais e revisores em um único fluxo de trabalho, com versionamento, validação, simulação em tempo real da experiência do aluno e recursos de inteligência artificial.</p>
-            <div class="tags">
-              <span class="tag">PHP</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">OpenAI API</span>
-            </div>
-            <span class="card__more">Ver o case completo
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </div>
-          <figure class="card__figure">
-            <img src="assets/flow/flow-preview.svg" width="640" height="420" alt="Ilustração do fluxo de autoria do FLOW: rascunho, revisão, validação e publicação" loading="lazy">
-          </figure>
-        </article>
-
-        <article class="card card--split" data-reveal>
-          <div>
-            <p class="card__org">SENAI · ferramenta de sala de aula</p>
-            <h3 class="card__title"><a href="ia/index.html#senaiclass">SENAI Class — aula interativa com IA</a></h3>
-            <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">OpenAI API</span><span class="tag">Entra ID</span></div>
-          </div>
-          <div>
-            <p class="card__text">Ferramenta para o professor levar atividade gamificada para a sala: quiz, situação de aprendizagem e aula interativa. A IA gera as questões e o material a partir do tema, avalia as respostas abertas e sugere o feedback — o professor confere e decide. Login institucional via Microsoft Entra ID.</p>
-            <span class="card__more">Ver o trabalho com IA
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </div>
-        </article>
-
-        <div class="projects__row">
-          <article class="card" data-reveal>
-            <p class="card__org">CNPq · IILP / CPLP</p>
-            <h3 class="card__title"><a href="moodle/index.html#obsple">ObsPLE-PL2 — Observatório de Português como Língua Estrangeira</a></h3>
-            <p class="card__text">Ambiente Virtual de Aprendizagem para uma rede internacional vinculada ao CNPq e ao IILP/CPLP. Personalização da plataforma Moodle, diagramação dos conteúdos e melhorias de navegação e organização da informação. Utilizado em três edições do curso, com 1.058 alunos.</p>
-            <div class="tags"><span class="tag">Moodle</span><span class="tag">PHP</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-          </article>
-
-          <article class="card" data-reveal style="--i:1">
-            <p class="card__org">Ministério da Justiça · OEI</p>
-            <h3 class="card__title"><a href="moodle/index.html#reintegro">Projeto (Re)Integro</a></h3>
-            <p class="card__text">Ambiente Virtual de Aprendizagem para as ações de formação e reintegração social do Ministério da Justiça em parceria com a OEI. Construção e configuração da plataforma Moodle, organização do ambiente e recursos que garantiram uma experiência estruturada e acessível aos participantes.</p>
-            <div class="tags"><span class="tag">Moodle</span><span class="tag">PHP</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-          </article>
-
-          <article class="card" data-reveal style="--i:2">
-            <p class="card__org">UFRGS · OEI</p>
-            <h3 class="card__title"><a href="moodle/index.html#fronteiras">Cruzando Fronteiras</a></h3>
-            <p class="card__text">Ambiente Virtual de Aprendizagem para o projeto Cruzando Fronteiras, em parceria com a Universidade Federal do Rio Grande do Sul. Construção, customização e configuração do Moodle para a oferta de cursos, atividades e acompanhamento dos participantes.</p>
-            <div class="tags"><span class="tag">Moodle</span><span class="tag">PHP</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-          </article>
-        </div>
-      </div>
-
-      <p style="margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap" data-reveal>
-        <a class="btn btn--primary" href="ia/index.html">Ver o trabalho com IA
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn--ghost" href="moodle/index.html">Ver o trabalho com Moodle em detalhe
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== Experiência ===== -->
-  <section class="section" id="experiencia" aria-labelledby="exp-t">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Trajetória</p>
-        <h2 id="exp-t">Experiência</h2>
-      </div>
-
-      <div class="timeline">
-        <article class="tl tl--current" data-reveal>
-          <p class="tl__when">Jun 2022 — Atual</p>
-          <h3 class="tl__role">Analista de Sistemas</h3>
-          <p class="tl__where">SENAI CETIND · Lauro de Freitas, BA</p>
-          <ul class="tl__list">
-            <li>Desenvolvimento e manutenção de sistemas em PHP, JavaScript, MySQL e APIs REST.</li>
-            <li>Administração, customização e suporte de ambientes Moodle.</li>
-            <li>Criação de soluções educacionais digitais para cursos e treinamentos.</li>
-            <li>Integração de tecnologias voltadas para educação profissional e corporativa.</li>
-          </ul>
-        </article>
-
-        <article class="tl" data-reveal style="--i:1">
-          <p class="tl__when">Jun 2015 — Jun 2022</p>
-          <h3 class="tl__role">Programador</h3>
-          <p class="tl__where">SENAI CETIND</p>
-          <ul class="tl__list">
-            <li>Desenvolvimento de jogos e simuladores educacionais com Adobe Animate, HTML5 e JavaScript.</li>
-            <li>Criação, implementação e manutenção de ambientes Moodle.</li>
-            <li>Desenvolvimento e manutenção de sistemas corporativos em PHP e JavaScript.</li>
-          </ul>
-        </article>
-
-        <article class="tl" data-reveal style="--i:2">
-          <p class="tl__when">Set 2013 — Jun 2015</p>
-          <h3 class="tl__role">Estagiário</h3>
-          <p class="tl__where">SENAI CETIND</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Contato ===== -->
-  <section class="section section--tint" id="contato" aria-labelledby="cont-t">
-    <div class="wrap">
-      <div class="section__head" data-reveal>
-        <p class="eyebrow">Contato</p>
-        <h2 id="cont-t">Vamos conversar</h2>
-        <p class="section__lead">Disponível para projetos de Moodle, ambientes virtuais de aprendizagem e desenvolvimento web educacional.</p>
-      </div>
-
-      <div class="contact">
-        <a class="contact__item" href="mailto:ambrosipaulo@gmail.com" data-reveal>
-          <span class="contact__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          </span>
-          <span>
-            <span class="contact__k">E-mail</span>
-            <span class="contact__v">ambrosipaulo@gmail.com</span>
-          </span>
-        </a>
-
-        <a class="contact__item" href="https://www.linkedin.com/in/pauloambrosi" rel="me noopener" target="_blank" data-reveal style="--i:1">
-          <span class="contact__icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6 2.49 2.49 0 0 1 4.98 3.5zM3 8.98h4v12H3zM9.5 8.98h3.83v1.64h.05a4.2 4.2 0 0 1 3.78-2.08c4.04 0 4.79 2.66 4.79 6.12v6.32h-4v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.16 1.46-2.16 2.96v5.7h-4z"/></svg>
-          </span>
-          <span>
-            <span class="contact__k">LinkedIn</span>
-            <span class="contact__v">/in/pauloambrosi</span>
-          </span>
-        </a>
-
-        <a class="contact__item" href="https://github.com/pauloambrosi" rel="me noopener" target="_blank" data-reveal style="--i:2">
-          <span class="contact__icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94a3.9 3.9 0 0 1 1.03-2.7 3.6 3.6 0 0 1 .1-2.66s.84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03a3.6 3.6 0 0 1 .1 2.66 3.9 3.9 0 0 1 1.03 2.7c0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-          </span>
-          <span>
-            <span class="contact__k">GitHub</span>
-            <span class="contact__v">@pauloambrosi</span>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="wrap footer__inner">
-    <p>© <span id="year">2026</span> Paulo Ambrosi · Salvador, BA</p>
-    <nav class="footer__links" aria-label="Links do rodapé">
-      <a href="flow/index.html">FLOW</a>
-      <a href="moodle/index.html">Moodle</a>
-      <a href="ia/index.html">IA</a>
-      <a href="en/index.html" hreflang="en" lang="en">English</a>
-      <a href="https://github.com/pauloambrosi" rel="noopener" target="_blank">GitHub</a>
-    </nav>
   </div>
-</footer>
+</section>
+
+<!-- ============ 05 · EXPERIÊNCIA — flow + in ============ -->
+<section class="ch ch--paper" id="cap7">
+  <div class="ch__inner">
+    <div class="intertitle"><span class="intertitle__n">07</span><h2 class="intertitle__t">Experiência</h2></div>
+  </div>
+  <div class="ch__inner" style="padding-bottom:clamp(4rem,9vw,7rem)">
+    <div class="strata" data-sc-in data-sc-stagger="70">
+      <div class="stratum">
+        <span class="stratum__when">Jun 2022 — Atual</span>
+        <div><h3>Analista de Sistemas</h3><p class="stratum__where">SENAI CETIND · Lauro de Freitas, BA</p>
+        <ul>
+          <li>Desenvolvimento e manutenção de sistemas em PHP, JavaScript, MySQL e APIs REST.</li>
+          <li>Administração, customização e suporte de ambientes Moodle.</li>
+          <li>Criação de soluções educacionais digitais para cursos e treinamentos.</li>
+          <li>Integração de tecnologias voltadas para educação profissional e corporativa.</li>
+        </ul></div>
+      </div>
+      <div class="stratum">
+        <span class="stratum__when">Jun 2015 — Jun 2022</span>
+        <div><h3>Programador</h3><p class="stratum__where">SENAI CETIND</p>
+        <ul>
+          <li>Desenvolvimento de jogos e simuladores educacionais com Adobe Animate, HTML5 e JavaScript.</li>
+          <li>Criação, implementação e manutenção de ambientes Moodle.</li>
+          <li>Desenvolvimento e manutenção de sistemas corporativos em PHP e JavaScript.</li>
+        </ul></div>
+      </div>
+      <div class="stratum">
+        <span class="stratum__when">Set 2013 — Jun 2015</span>
+        <div><h3>Estagiário</h3><p class="stratum__where">SENAI CETIND</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · CONTATO — colofão · reveal ============ -->
+<section class="ch ch--moss" id="cap8">
+  <div class="ch__inner colophon">
+    <div data-sc-reveal="up" data-sc-reveal-at="0.02 0.4">
+      <p class="intertitle__n" style="margin-bottom:1.5rem">08 · Contato</p>
+      <p class="colophon__ask">Disponível para projetos de Moodle, ambientes virtuais de aprendizagem e desenvolvimento web educacional. O caminho mais curto é
+        <a href="mailto:ambrosipaulo@gmail.com">ambrosipaulo@gmail.com</a>.</p>
+    </div>
+    <div class="colophon__grid" data-sc-in data-sc-stagger="60">
+      <div><p class="colophon__k">E-mail</p><a href="mailto:ambrosipaulo@gmail.com">ambrosipaulo@gmail.com</a></div>
+      <div><p class="colophon__k">LinkedIn</p><a href="https://www.linkedin.com/in/pauloambrosi" rel="me noopener" target="_blank">/in/pauloambrosi</a></div>
+      <div><p class="colophon__k">GitHub</p><a href="https://github.com/pauloambrosi" rel="me noopener" target="_blank">@pauloambrosi</a></div>
+      <div><p class="colophon__k">Local</p><a href="#cap1">Salvador, Bahia, Brasil</a></div>
+    </div>
+    <div class="colophon__foot">
+      <p>© <span id="year">2026</span> Paulo Ambrosi · Composto em Fraunces e Inter</p>
+      <nav aria-label="Links do rodapé">
+        <a href="flow/index.html">FLOW</a>
+        <a href="moodle/index.html">Moodle</a>
+        <a href="ia/index.html">IA</a>
+        <a href="en/index.html" hreflang="en" lang="en">English</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <script type="application/ld+json">
 {
@@ -439,16 +691,151 @@
       "name": "Projetos selecionados",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "FLOW — Sistema de Autoria e Gestão de Conteúdo", "url": "https://paulo.ambrosi.top/flow/" },
-        { "@type": "ListItem", "position": 2, "name": "ObsPLE-PL2 — Observatório de Português como Língua Estrangeira", "url": "https://paulo.ambrosi.top/moodle/#obsple" },
-        { "@type": "ListItem", "position": 3, "name": "Projeto (Re)Integro", "url": "https://paulo.ambrosi.top/moodle/#reintegro" },
-        { "@type": "ListItem", "position": 4, "name": "Cruzando Fronteiras", "url": "https://paulo.ambrosi.top/moodle/#fronteiras" },
-        { "@type": "ListItem", "position": 5, "name": "SENAI Class — aula interativa com IA", "url": "https://paulo.ambrosi.top/ia/#senaiclass" }
+        { "@type": "ListItem", "position": 2, "name": "SENAI Class — aula interativa com IA", "url": "https://paulo.ambrosi.top/ia/#senaiclass" },
+        { "@type": "ListItem", "position": 3, "name": "ObsPLE-PL2 — Observatório de Português como Língua Estrangeira", "url": "https://paulo.ambrosi.top/moodle/#obsple" },
+        { "@type": "ListItem", "position": 4, "name": "Projeto (Re)Integro", "url": "https://paulo.ambrosi.top/moodle/#reintegro" },
+        { "@type": "ListItem", "position": 5, "name": "Cruzando Fronteiras", "url": "https://paulo.ambrosi.top/moodle/#fronteiras" }
       ]
     }
   ]
 }
 </script>
-<script src="js/main.js?v=20261026" defer></script>
+
+<script src="scrollcraft.js?v=20261106"></script>
+<script>ScrollCraft.mount(document.body);</script>
+<script>
+/* --- signature move: a passada do revisor ------------------------- */
+(function () {
+  'use strict';
+  var proofs = Array.prototype.slice.call(document.querySelectorAll('.proof'));
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!proofs.length) return;
+
+  if (reduced.matches || !('IntersectionObserver' in window)) {
+    proofs.forEach(function (p) { p.classList.add('is-resolved'); });
+  } else {
+    // A primeira marca ja esta em tela quando a pagina carrega. Se resolvesse no
+    // load, ninguem veria a proposta: o movimento acontece antes de existir leitor.
+    // Ela espera o primeiro gesto de leitura.
+    var first = proofs[0];
+    var rest = proofs.slice(1);
+
+    var armed = false;
+    function armFirst() {
+      if (armed) return;
+      armed = true;
+      window.removeEventListener('scroll', armFirst);
+      window.removeEventListener('keydown', armFirst);
+      window.removeEventListener('pointerdown', armFirst);
+      first.classList.add('is-resolved');
+    }
+    window.addEventListener('scroll', armFirst, { passive: true, once: false });
+    window.addEventListener('keydown', armFirst);
+    window.addEventListener('pointerdown', armFirst);
+    // Quem nunca rola tambem precisa acabar lendo o texto aceito.
+    window.setTimeout(armFirst, 2600);
+
+    var io = new IntersectionObserver(function (es, obs) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-resolved');
+        obs.unobserve(e.target);
+      });
+    }, { rootMargin: '-45% 0px -35% 0px', threshold: 0 });
+    rest.forEach(function (p) { io.observe(p); });
+  }
+
+  /* --- folio: marca o capítulo corrente --------------------------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.folio a'));
+  var seen = {};
+  var chapters = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+  if (chapters.length && 'IntersectionObserver' in window) {
+    var fio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
+      var current = chapters.filter(function (c) { return seen[c.id]; })[0];
+      links.forEach(function (a) { a.removeAttribute('aria-current'); });
+      if (current) {
+        var hit = links.filter(function (a) { return a.getAttribute('href') === '#' + current.id; })[0];
+        if (hit) hit.setAttribute('aria-current', 'true');
+      }
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    chapters.forEach(function (c) { fio.observe(c); });
+  }
+
+  /* --- a regra de cada intertitulo se desenha na entrada -------------- */
+  if ('IntersectionObserver' in window && !reduced.matches) {
+    var drawIO = new IntersectionObserver(function (es, obs) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-drawn');
+        obs.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -25% 0px', threshold: 0 });
+    Array.prototype.forEach.call(document.querySelectorAll('.intertitle'), function (el) { drawIO.observe(el); });
+
+    var stratIO = new IntersectionObserver(function (es, obs) {
+      es.forEach(function (e, i) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        window.setTimeout(function () { el.classList.add('is-in'); },
+                          (Array.prototype.indexOf.call(el.parentNode.children, el) % 4) * 90);
+        obs.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
+    Array.prototype.forEach.call(document.querySelectorAll('.stratum'), function (el) { stratIO.observe(el); });
+  } else {
+    Array.prototype.forEach.call(document.querySelectorAll('.intertitle'), function (el) { el.classList.add('is-drawn'); });
+    Array.prototype.forEach.call(document.querySelectorAll('.stratum'), function (el) { el.classList.add('is-in'); });
+  }
+
+  /* --- escalonamento item a item ------------------------------------- */
+  var groups = Array.prototype.slice.call(document.querySelectorAll('[data-stagger-items]'));
+  groups.forEach(function (g) {
+    Array.prototype.forEach.call(g.children, function (c, i) { c.style.setProperty('--i', i); });
+  });
+  if (reduced.matches || !('IntersectionObserver' in window)) {
+    groups.forEach(function (g) { g.classList.add('is-staggered'); });
+  } else {
+    var stagIO = new IntersectionObserver(function (es, obs) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-staggered');
+        obs.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
+    groups.forEach(function (g) { stagIO.observe(g); });
+  }
+
+  /* --- o folio recua enquanto o trilho lateral esta em cena ----------- */
+  var railCh = document.querySelector('#cap5');
+  var folioEl = document.getElementById('folio');
+  if (railCh && folioEl && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { folioEl.classList.toggle('is-withdrawn', e.isIntersecting); });
+    }, { rootMargin: '-30% 0px -30% 0px', threshold: 0 }).observe(railCh);
+  }
+
+  /* --- fio de progresso: so transform, nunca width por frame ---------- */
+  var thread = document.getElementById('thread');
+  if (thread && !reduced.matches) {
+    thread.style.width = '100%';
+    thread.style.transformOrigin = 'left';
+    var ticking = false;
+    var paint = function () {
+      var max = document.documentElement.scrollHeight - innerHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+      thread.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+      ticking = false;
+    };
+    addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(paint); }
+    }, { passive: true });
+    paint();
+  }
+
+  var y = document.getElementById('year');
+  if (y) y.textContent = String(new Date().getFullYear());
+}());
+</script>
 </body>
 </html>
- 
