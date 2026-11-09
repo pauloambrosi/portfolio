@@ -11,6 +11,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0F1310" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem('pa-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 
   <link rel="canonical" href="https://paulo.ambrosi.top/">
   <link rel="alternate" hreflang="pt-BR" href="https://paulo.ambrosi.top/">
@@ -81,7 +82,7 @@
     h3,
     .intertitle__t,
     .plate__name,
-    .peak h3,
+    .peak h2,
     .colophon__ask,
     .figure__n,
     .stratum h3,
@@ -205,12 +206,12 @@
 
     .folio a {
       font-family: var(--sc-font-mono);
-      font-size: .68rem;
+      font-size: .75rem;
       letter-spacing: .1em;
       text-transform: uppercase;
       text-decoration: none;
       color: inherit;
-      opacity: .34;
+      opacity: .6;
       transition: opacity .35s ease, letter-spacing .35s ease;
       display: flex;
       gap: .55rem;
@@ -263,7 +264,7 @@
       display: block;
       margin-bottom: .95rem;
       font-family: var(--sc-font-mono);
-      font-size: .74rem;
+      font-size: .8rem;
       font-weight: 500;
       letter-spacing: .16em;
       text-transform: uppercase;
@@ -331,7 +332,7 @@
       flex-wrap: wrap;
       gap: 1.5rem;
       font-family: var(--sc-font-mono);
-      font-size: .72rem;
+      font-size: .75rem;
       letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--sc-ink-soft);
@@ -373,7 +374,7 @@
 
     .record__k {
       font-family: var(--sc-font-mono);
-      font-size: .68rem;
+      font-size: .75rem;
       letter-spacing: .14em;
       text-transform: uppercase;
       color: var(--sc-accent);
@@ -408,7 +409,7 @@
     }
 
     .figure__suf {
-      font-size: .46em;
+      font-size: max(.46em, .8rem);
       margin-left: .22em;
       letter-spacing: .02em;
     }
@@ -447,7 +448,7 @@
 
     .lichen__k {
       font-family: var(--sc-font-mono);
-      font-size: .66rem;
+      font-size: .75rem;
       letter-spacing: .14em;
       text-transform: uppercase;
       color: var(--sc-ink-soft);
@@ -495,14 +496,14 @@
 
     .peak__kicker {
       font-family: var(--sc-font-mono);
-      font-size: .7rem;
+      font-size: .75rem;
       letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--sc-accent);
       margin-bottom: 1.2rem;
     }
 
-    .peak h3 {
+    .peak h2 {
       font-family: var(--sc-font-display);
       font-weight: 500;
       font-size: clamp(1.9rem, 1.25rem + 2.4vw, 3.1rem);
@@ -526,7 +527,7 @@
 
     .peak__tags span {
       font-family: var(--sc-font-mono);
-      font-size: .68rem;
+      font-size: .75rem;
       padding: .28rem .6rem;
       border: 1px solid var(--sc-hairline-strong);
       border-radius: 4px;
@@ -593,7 +594,7 @@
     .planes__cap {
       margin-top: 1rem;
       font-family: var(--sc-font-mono);
-      font-size: .68rem;
+      font-size: .75rem;
       color: var(--ink-dark-soft);
       letter-spacing: .04em;
     }
@@ -801,7 +802,7 @@
 
     .stratum__when {
       font-family: var(--sc-font-mono);
-      font-size: .7rem;
+      font-size: .75rem;
       letter-spacing: .08em;
       color: var(--sc-accent);
       padding-top: .3rem;
@@ -869,7 +870,7 @@
 
     .shotpair figcaption {
       margin-top: .6rem;
-      font-size: .76rem;
+      font-size: .84rem;
       line-height: 1.5;
       color: var(--sc-ink-soft);
     }
@@ -909,7 +910,7 @@
 
     .colophon__k {
       font-family: var(--sc-font-mono);
-      font-size: .64rem;
+      font-size: .75rem;
       letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--ink-dark-soft);
@@ -935,7 +936,7 @@
       gap: 1rem 2rem;
       justify-content: space-between;
       font-family: var(--sc-font-mono);
-      font-size: .66rem;
+      font-size: .75rem;
       letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--ink-dark-soft);
@@ -1072,7 +1073,91 @@
     .ch--moss :focus-visible {
       outline-color: var(--accent-dark);
     }
-  </style>
+  
+/* --- contato no herói e no fim dos atos --------------------------- */
+.plate__cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: clamp(1.75rem, 4vw, 2.5rem); }
+.btn { display: inline-flex; align-items: center; min-height: 2.9rem; padding: .7rem 1.35rem; border-radius: 4px; font-weight: 600; font-size: .98rem; text-decoration: none; border: 1px solid var(--sc-accent); transition: background-color .2s cubic-bezier(.16,1,.3,1), color .2s cubic-bezier(.16,1,.3,1); }
+.btn--solid { background: var(--sc-accent); color: var(--sc-accent-ink); }
+.btn--solid:hover { background: color-mix(in oklab, var(--sc-accent) 86%, #000); }
+.btn--line { color: var(--sc-ink); border-color: color-mix(in oklab, var(--sc-ink) 34%, transparent); }
+.btn--line:hover { border-color: var(--sc-ink); }
+.peak__links { display: flex; flex-wrap: wrap; column-gap: 1.75rem; }
+
+/* --- clarify: abertura do Moodle, cadeia do FLOW, local sem link --- */
+.chapter__lead { max-width: 54ch; margin: clamp(2rem, 5vw, 3rem) 0 clamp(2.5rem, 6vw, 3.5rem); font-size: 1.08rem; line-height: 1.7; color: var(--sc-ink); }
+.peak .chain__lead { margin-top: 1.6rem; font-weight: 600; color: var(--sc-ink); }
+.chain { list-style: none; margin: .6rem 0 0; padding: 0; counter-reset: step; max-width: 46ch; }
+.chain li { counter-increment: step; display: flex; gap: .85rem; padding: .42rem 0; border-top: 1px solid color-mix(in oklab, currentColor 22%, transparent); color: var(--sc-ink-soft); font-size: .95rem; line-height: 1.45; }
+.chain li:last-child { border-bottom: 1px solid color-mix(in oklab, currentColor 22%, transparent); }
+.chain li::before { content: counter(step); min-width: 1ch; color: var(--sc-accent); font-variant-numeric: tabular-nums; font-weight: 600; }
+.colophon__grid > div > p:not(.colophon__k) { margin: 0; }
+
+/* --- cabeçalho fixo: contato, idioma e tema ------------------------ */
+.masthead { position: fixed; top: clamp(.4rem, 1.4vw, 1rem); right: clamp(.4rem, 2vw, 1.5rem); z-index: 60; display: flex; align-items: center; color: #fff; mix-blend-mode: difference; font-family: var(--sc-font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; transition: transform .4s cubic-bezier(.16,1,.3,1); }
+.masthead.is-hidden { transform: translateY(calc(-100% - 1.5rem)); }
+.masthead a, .masthead button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 .55rem; color: inherit; background: none; border: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; text-decoration: none; cursor: pointer; }
+.masthead__lang { display: flex; }
+.masthead__lang a { padding: 0 .3rem; min-width: 36px; opacity: .62; }
+.masthead__lang a[aria-current] { opacity: 1; }
+.masthead a:hover { text-decoration: underline; text-underline-offset: .35em; }
+.masthead :focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
+.masthead svg { width: 18px; height: 18px; }
+.icon-sun { display: none; }
+@media (prefers-reduced-motion: reduce) { .masthead { transition: none; } }
+
+/* --- tema escuro: os capítulos claros escurecem, o corte entre vizinhos fica */
+:root[data-theme="dark"] { color-scheme: dark; --paper: #2B2F27; --paper-2: #22261E; --forest: #141811; --forest-dp: #0B0E0C; --sc-canvas: #2B2F27; }
+:root[data-theme="dark"] .ch--paper, :root[data-theme="dark"] .ch--paper2 { color: var(--ink-dark); --sc-ink: var(--ink-dark); --sc-ink-soft: var(--ink-dark-soft); --sc-accent: var(--accent-dark); --sc-accent-ink: #1A1F17; }
+:root[data-theme="dark"] .ch--paper :focus-visible, :root[data-theme="dark"] .ch--paper2 :focus-visible { outline-color: var(--accent-dark); }
+:root[data-theme="dark"] .icon-moon { display: none; }
+:root[data-theme="dark"] .icon-sun { display: block; }
+@media (prefers-color-scheme: dark) {
+:root:not([data-theme="light"]) { color-scheme: dark; --paper: #2B2F27; --paper-2: #22261E; --forest: #141811; --forest-dp: #0B0E0C; --sc-canvas: #2B2F27; }
+:root:not([data-theme="light"]) .ch--paper, :root:not([data-theme="light"]) .ch--paper2 { color: var(--ink-dark); --sc-ink: var(--ink-dark); --sc-ink-soft: var(--ink-dark-soft); --sc-accent: var(--accent-dark); --sc-accent-ink: #1A1F17; }
+:root:not([data-theme="light"]) .ch--paper :focus-visible, :root:not([data-theme="light"]) .ch--paper2 :focus-visible { outline-color: var(--accent-dark); }
+:root:not([data-theme="light"]) .icon-moon { display: none; }
+:root:not([data-theme="light"]) .icon-sun { display: block; }
+}
+
+/* --- adapt: linhas finas por capítulo, linha de deslizar, capturas ampliáveis */
+.ch { --sc-hairline: color-mix(in oklab, var(--sc-ink) 12%, transparent); --sc-hairline-strong: color-mix(in oklab, var(--sc-ink) 22%, transparent); }
+.zoom { display: block; cursor: zoom-in; border-radius: 8px; }
+.planes .zoom { display: inline; }
+.zoom:focus-visible { outline: 2px solid var(--sc-accent); outline-offset: 4px; }
+@media (max-width: 860px) {
+  .rail--swipe { height: auto; align-items: flex-start; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: clamp(1.25rem, 5vw, 3rem); padding-block: clamp(3.5rem, 10vw, 5rem); scrollbar-width: thin; scrollbar-color: var(--sc-accent) transparent; }
+  .rail--swipe > * { scroll-snap-align: start; }
+  .rail--swipe .rail__lead { flex-basis: min(84vw, 26rem); }
+  .rail--swipe::after { content: ""; flex: 0 0 1px; }
+}
+.lightbox { padding: 0; border: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; display: none; place-items: center; }
+.lightbox[open] { display: grid; }
+.lightbox::backdrop { background: rgba(8, 10, 8, .9); }
+.lightbox img { max-width: min(96vw, 1600px); max-height: 86vh; width: auto; height: auto; border-radius: 6px; box-shadow: 0 30px 80px -30px rgba(0, 0, 0, .9); }
+.lightbox__close { position: fixed; top: max(.75rem, env(safe-area-inset-top)); right: .75rem; min-width: 44px; min-height: 44px; padding: 0 1rem; border: 1px solid rgba(255, 255, 255, .35); border-radius: 4px; background: rgba(8, 10, 8, .6); color: #F2F0EA; font: 600 .95rem var(--sc-font-text); cursor: pointer; }
+.lightbox__close:hover { border-color: #F2F0EA; }
+.lightbox__close:focus-visible { outline: 2px solid #F08A4B; outline-offset: 2px; }
+.stratum > * { min-width: 0; }
+@media (max-width: 700px) { .stratum { grid-template-columns: minmax(0, 1fr); } .shotrow { grid-template-columns: minmax(0, 1fr); } }
+
+/* --- typeset: medida e quebras -------------------------------------- */
+.stratum ul { max-width: 58ch; }
+p, li, figcaption, .colophon__ask { text-wrap: pretty; }
+h1, h2, h3 { text-wrap: balance; }
+
+/* --- polish: separador das tags nunca fica no fim da linha --------- */
+/* o ponto vai antes de cada item; uma faixa recortada à esquerda some com o
+   ponto de quem abre linha, então nenhuma linha começa ou termina em "·". */
+.lichen__items { gap: .45rem 0; margin-left: -1.6rem; clip-path: inset(-1rem -1rem -1rem 1.6rem); }
+.lichen__items span { position: relative; padding-left: 1.6rem; }
+.lichen__items span::after, .lichen__items span:last-child::after { content: none; }
+.lichen__items span::before { content: "·"; position: absolute; left: .62rem; color: var(--sc-ink-soft); opacity: .6; }
+
+/* contato: alvo de toque de 44px sem mudar o desenho do link */
+.colophon__grid a { display: inline-block; padding-block: .65rem; border-bottom: 0; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, .3); text-decoration-thickness: 1px; text-underline-offset: .3em; }
+.colophon__grid a:hover { text-decoration-color: currentColor; }
+.colophon__k { margin-bottom: 0; }
+</style>
 </head>
 
 <body>
@@ -1081,44 +1166,227 @@
   <div class="sc-grain" aria-hidden="true"></div>
   <div class="thread" id="thread" aria-hidden="true"></div>
   <a class="skip" href="#cap1">Pular para o conteúdo</a>
+<header class="masthead" id="masthead"><a href="#cap8">Contato</a><span class="masthead__lang" role="group" aria-label="Idioma"><a href="index.html" aria-current="page" hreflang="pt-BR" lang="pt-BR">PT</a><a href="en/index.html" hreflang="en" lang="en">EN</a></span><button id="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></header>
 
   <nav class="folio" id="folio" aria-label="Capítulos">
     <a href="#cap1"><span>01</span> Descrição</a>
-    <a href="#cap2"><span>02</span> Currículo</a>
-    <a href="#cap3"><span>03</span> Tags</a>
-    <a href="#cap4"><span>04</span> FLOW</a>
-    <a href="#cap5"><span>05</span> SENAI Class</a>
-    <a href="#cap6"><span>06</span> Moodle</a>
+    <a href="#cap4"><span>02</span> FLOW</a>
+    <a href="#cap5"><span>03</span> SENAI Class</a>
+    <a href="#cap6"><span>04</span> Moodle</a>
+    <a href="#cap2"><span>05</span> Currículo</a>
+    <a href="#cap3"><span>06</span> Tags</a>
     <a href="#cap7"><span>07</span> Experiência</a>
     <a href="#cap8"><span>08</span> Contato</a>
   </nav>
 
   <main>
 
-    <!-- ============ 01 · DESCRIÇÃO — folha de rosto · in + signature ============ -->
+    <!-- ============ 01 · DESCRIÇÃO ============ -->
     <section class="ch ch--paper" id="cap1" data-sc-act="flow">
       <div class="ch__inner plate" data-sc-in data-sc-stagger="70">
         <h1 class="plate__name" data-sc-parallax="-0.08">Paulo Ambrosi</h1>
         <p class="plate__claim">
-          <span class="plate__role">Analista de Sistemas</span>
+          <span class="plate__role">Produtos digitais e soluções com IA</span>
           <span class="typer" data-typer aria-hidden="true"
-            data-phrases="Construo, implemento e testo produtos digitais.|Integro inteligência artificial a sistemas de gestão e automação.|Desenvolvo, implemento, implanto Ambientes Virtuais de Aprendizagem.|Desenvolvo SCORMs 1.2 e 2004.|Desenho IA que propõe e uma pessoa decide.|Automatizo processos com agentes de IA."><span
+            data-phrases="Construo, implemento e testo produtos digitais.|Integro inteligência artificial a sistemas de gestão e automação.|Automatizo processos com agentes de IA.|Desenho IA que propõe e uma pessoa decide."><span
               class="typer__text">Construo, implemento e testo produtos digitais.</span><span
               class="typer__caret"></span></span>
-          <span class="vh" data-typer-sr>Construo, implemento e testo produtos digitais. Integro inteligência artificial
-            a sistemas de gestão e automação. Desenvolvo, implemento, implanto Ambientes Virtuais de Aprendizagem. Desenvolvo SCORMs 1.2 e 2004. Desenho IA que propõe e uma pessoa decide. Automatizo processos com
-            agentes de IA.</span>
+          <span class="vh" data-typer-sr>Construo, implemento e testo produtos digitais. Integro inteligência artificial a sistemas de gestão e automação. Automatizo processos com agentes de IA. Desenho IA que propõe e uma pessoa decide.</span>
         </p>
+        <div class="plate__cta" aria-label="Contato" role="group"><a class="btn btn--solid" href="mailto:ambrosipaulo@gmail.com">Escrever um e-mail</a><a class="btn btn--line" href="https://www.linkedin.com/in/pauloambrosi" rel="me noopener" target="_blank">Conversar no LinkedIn</a></div>
         <p class="plate__meta">
           <span>Salvador · Bahia</span><span>12+ anos</span><span>SENAI Bahia</span>
         </p>
       </div>
     </section>
 
-    <!-- ============ 02 · CURRÍCULO — count ============ -->
+    <!-- ============ 02 · FLOW ============ -->
+    <section class="ch ch--deep" id="cap4" data-sc-act="pin" data-sc-span="1.8" data-sc-dwell="0.1">
+      <div data-sc-stage>
+        <div class="ch__inner peak">
+          <div data-sc-cue="0 1 0 0">
+            <p class="peak__kicker">02 · Produto digital em destaque</p>
+            <h2>FLOW</h2>
+            <p>Produto digital que conduz o fluxo de produção de conteúdo, do plano de aula à entrega final. Tem IA integrada ao próprio processo.</p>
+           
+            <p class="chain__lead">Uma pessoa, o produto inteiro:</p><ol class="chain"><li>Modelagem do fluxo e do banco</li><li>Editor por seções e versionamento</li><li>IA no editor: assistente e revisão</li><li>Exportação SCORM, PDF, DOCX e IDML</li><li>Implantação e manutenção</li></ol>
+            <div class="peak__links"><a class="peak__link" href="flow/index.html">Ver o case completo →</a><a class="peak__link" href="#cap8">Quer um produto assim? Vamos conversar&nbsp;→</a></div>
+          </div>
+          <div>
+            <div class="planes">
+              <a class="zoom" href="assets/flow/editor-secoes.jpg" aria-label="Ampliar imagem: Editor de aulas do FLOW com os blocos da estrutura e o painel de tipos de seção"><img class="planes__back" data-sc-parallax="-0.46" src="assets/flow/editor-secoes.jpg" width="1600"
+                height="1000" alt="Editor de aulas do FLOW com os blocos da estrutura e o painel de tipos de seção"
+                loading="lazy"></a>
+              <a class="zoom" href="assets/flow/fluxo-status.jpg" aria-label="Ampliar imagem: Lista de aulas de uma unidade curricular, com o perfil responsável por cada uma"><img class="planes__mid" data-sc-parallax="-0.28" src="assets/flow/fluxo-status.jpg" width="1600"
+                height="1000" alt="Lista de aulas de uma unidade curricular, com o perfil responsável por cada uma"
+                loading="lazy"></a>
+              <a class="zoom" href="assets/flow/minhas-aulas.jpg" aria-label="Ampliar imagem: Tela Minhas Aulas do FLOW, a fila de aulas do usuário em cards"><img class="planes__front" data-sc-parallax="-0.12" src="assets/flow/minhas-aulas.jpg" width="1600"
+                height="1000" alt="Tela Minhas Aulas do FLOW, a fila de aulas do usuário em cards" loading="lazy"></a>
+              <span class="planes__floor" aria-hidden="true"></span>
+            </div>
+            <p class="planes__cap">FLOW, ambiente de demonstração. SENAI Bahia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 · SENAI CLASS ============ -->
+    <section class="ch ch--forest" id="cap5" data-sc-act="pan" data-sc-span="2.5">
+      <div data-sc-stage>
+        <div class="rail" data-sc-pan="0.04" data-stagger-items>
+          <div class="rail__lead">
+            <p class="peak__kicker">03 · Produto digital</p>
+            <h2 class="rail__title">SENAI&nbsp;Class</h2>
+            <p>Produto digital para o professor levar atividade gamificada para a sala: quiz, situação de aprendizagem e
+              aula interativa, com ranking e histórico. A IA gera as questões e o material, corrige respostas abertas e
+              sugere o feedback; quem decide é o professor.</p>
+            <div class="peak__tags"><span>PHP</span><span>MySQL</span><span>OpenAI API</span><span>Entra ID</span></div>
+            <div class="peak__links"><a class="peak__link" href="ia/index.html#senaiclass">Ver o trabalho com IA →</a><a class="peak__link" href="#cap8">Quer um produto assim? Vamos conversar&nbsp;→</a></div>
+          </div>
+
+          <figure class="rail__card">
+            <a class="zoom" href="assets/senaiclass/login.jpg" aria-label="Ampliar imagem: Tela de entrada do SENAI Class, com acesso institucional para o professor e entrada por PIN para o aluno"><img src="assets/senaiclass/login.jpg" width="1400" height="1044"
+              alt="Tela de entrada do SENAI Class, com acesso institucional para o professor e entrada por PIN para o aluno"
+              loading="lazy"></a>
+            <figcaption><b>Duas portas.</b> O professor entra pela conta institucional; o aluno entra só com o PIN da
+              sala.</figcaption>
+          </figure>
+
+          <figure class="rail__card">
+            <a class="zoom" href="assets/senaiclass/recursos.jpg" aria-label="Ampliar imagem: Tela Meus Recursos do SENAI Class, com cards de quiz e de aula interativa criados pelo professor"><img src="assets/senaiclass/recursos.jpg" width="1400" height="1049"
+              alt="Tela Meus Recursos do SENAI Class, com cards de quiz e de aula interativa criados pelo professor"
+              loading="lazy"></a>
+            <figcaption><b>Os recursos do professor.</b> Quiz, revisão e aula interativa, cada um com turma e contagem
+              de questões.</figcaption>
+          </figure>
+
+          <figure class="rail__card">
+            <a class="zoom" href="assets/senaiclass/ia-criando.jpg" aria-label="Ampliar imagem: Modal do SENAI Class com a mensagem Criando a situação de aprendizagem, enquanto a IA monta o material"><img src="assets/senaiclass/ia-criando.jpg" width="1400" height="1048"
+              alt="Modal do SENAI Class com a mensagem Criando a situação de aprendizagem, enquanto a IA monta o material"
+              loading="lazy"></a>
+            <figcaption><b>A IA propõe.</b> O professor dá o tema e a IA monta a situação de aprendizagem inteira. O
+              aviso é explícito: dá para revisar tudo antes de salvar.</figcaption>
+          </figure>
+
+          <figure class="rail__card">
+            <a class="zoom" href="assets/senaiclass/sa-capa.jpg" aria-label="Ampliar imagem: Slide de abertura de uma situação de aprendizagem gerada, com fotografia em tela cheia e o título Utilização de IA"><img src="assets/senaiclass/sa-capa.jpg" width="1400" height="1041"
+              alt="Slide de abertura de uma situação de aprendizagem gerada, com fotografia em tela cheia e o título Utilização de IA"
+              loading="lazy"></a>
+            <figcaption><b>O resultado, em tela cheia.</b> A situação de aprendizagem abre como uma apresentação, pronta
+              para o projetor.</figcaption>
+          </figure>
+
+          <figure class="rail__card">
+            <a class="zoom" href="assets/senaiclass/sa-contexto.jpg" aria-label="Ampliar imagem: Slide de contexto de uma situação de aprendizagem gerada, com texto sobre uso de IA em um almoxarifado e imagem de apoio"><img src="assets/senaiclass/sa-contexto.jpg" width="1400" height="1044"
+              alt="Slide de contexto de uma situação de aprendizagem gerada, com texto sobre uso de IA em um almoxarifado e imagem de apoio"
+              loading="lazy"></a>
+            <figcaption><b>E uma pessoa decide.</b> Contexto, imagem e a pergunta que abre a discussão. O professor
+              revisa antes de projetar.</figcaption>
+          </figure>
+
+          <figure class="rail__card">
+            <a class="zoom" href="assets/senaiclass/sala.jpg" aria-label="Ampliar imagem: Sala de espera do SENAI Class, com PIN e QR code para os alunos entrarem na atividade"><img src="assets/senaiclass/sala.jpg" width="1400" height="1046"
+              alt="Sala de espera do SENAI Class, com PIN e QR code para os alunos entrarem na atividade"
+              loading="lazy"></a>
+            <figcaption><b>A sala abre.</b> PIN e QR na tela, a turma entra pelo celular e quem chega depois ainda
+              alcança.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 · AMBIENTES MOODLE ============ -->
+    <section class="ch ch--paper2" id="cap6">
+      <div class="ch__inner">
+        <div class="intertitle"><span class="intertitle__n">04</span>
+          <h2 class="intertitle__t">Ambientes Moodle</h2>
+        </div>
+      </div>
+      <div class="ch__inner" style="padding-bottom:clamp(4rem,9vw,7rem)">
+        <p class="chapter__lead">Desenvolvo, implemento e implanto Ambientes Virtuais de Aprendizagem, e produzo pacotes SCORM 1.2 e 2004 para eles.</p>
+        <div class="strata" data-sc-in data-sc-stagger="70">
+          <div class="stratum stratum--wide">
+            <span class="stratum__when">SENAI Bahia</span>
+            <div>
+              <h3>AVA do SENAI Bahia</h3>
+              <p class="stratum__where">Oferta EAD do SENAI Bahia, desde 2015</p>
+              <ul>
+                <li>O Moodle onde os cursos a distância do SENAI Bahia são ofertados. Em operação desde 2015, hoje com
+                  <b>145 mil alunos cadastrados</b> e centenas de cursos no ar. É também o destino dos pacotes SCORM que
+                  saem do FLOW.</li>
+              </ul>
+              <div class="shotrow">
+                <figure class="shotpair">
+                  <a class="zoom" href="assets/moodle-prints/senai-entrada.jpg" aria-label="Ampliar imagem: Tela de entrada do AVA do SENAI, com o formulário de acesso e um vídeo explicando como entrar na plataforma"><img src="assets/moodle-prints/senai-entrada.jpg" width="1100" height="627"
+                    alt="Tela de entrada do AVA do SENAI, com o formulário de acesso e um vídeo explicando como entrar na plataforma"
+                    loading="lazy"></a>
+                  <figcaption>A entrada, com o tutorial de primeiro acesso ao lado do login.</figcaption>
+                </figure>
+                <figure class="shotpair">
+                  <a class="zoom" href="assets/moodle-prints/senai-painel.jpg" aria-label="Ampliar imagem: Painel do Moodle do SENAI Bahia, com acesso rápido, próximas atividades, visão geral e calendário"><img src="assets/moodle-prints/senai-painel.jpg" width="1400" height="797"
+                    alt="Painel do Moodle do SENAI Bahia, com acesso rápido, próximas atividades, visão geral e calendário"
+                    loading="lazy"></a>
+                  <figcaption>O painel do aluno, com acesso rápido, atividades e calendário.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="stratum stratum--wide">
+            <span class="stratum__when">CNPq · IILP</span>
+            <div>
+              <h3>ObsPLE-PL2</h3>
+              <p class="stratum__where">Observatório de Português como Língua Estrangeira</p>
+              <ul>
+                <li>Ambiente Virtual de Aprendizagem para uma rede internacional vinculada ao CNPq e ao IILP/CPLP.
+                  Personalização do Moodle, diagramação dos conteúdos e melhorias de navegação. Quatro edições do curso, com mais de mil alunos.</li>
+              </ul>
+              <div class="shotrow">
+                <figure class="shotpair">
+                  <a class="zoom" href="assets/moodle-prints/obsple-entrada.jpg" aria-label="Ampliar imagem: Página de entrada do Observatório de Português Língua Estrangeira, com acesso à plataforma e os blocos de apresentação do curso"><img src="assets/moodle-prints/obsple-entrada.jpg" width="1400" height="796"
+                    alt="Página de entrada do Observatório de Português Língua Estrangeira, com acesso à plataforma e os blocos de apresentação do curso"
+                    loading="lazy"></a>
+                  <figcaption>A entrada, com o acesso e a apresentação do curso.</figcaption>
+                </figure>
+                <figure class="shotpair">
+                  <a class="zoom" href="assets/moodle-prints/obsple-cursos.jpg" aria-label="Ampliar imagem: Lista de cursos do Observatório PLE-PL2, com as edições do curso Português Pluricêntrico em cartões coloridos"><img src="assets/moodle-prints/obsple-cursos.jpg" width="1100" height="633"
+                    alt="Lista de cursos do Observatório PLE-PL2, com as edições do curso Português Pluricêntrico em cartões coloridos"
+                    loading="lazy"></a>
+                  <figcaption>As edições do Português Pluricêntrico, cada uma com seu ambiente.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="stratum">
+            <span class="stratum__when">MJ · OEI</span>
+            <div>
+              <h3>Projeto (Re)Integro</h3>
+              <p class="stratum__where">Ministério da Justiça e OEI</p>
+              <ul>
+                <li>AVA para ações de formação e reintegração social. Construção e configuração da plataforma Moodle e
+                  organização do ambiente educacional.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stratum">
+            <span class="stratum__when">UFRGS · OEI</span>
+            <div>
+              <h3>Cruzando Fronteiras</h3>
+              <p class="stratum__where">Universidade Federal do Rio Grande do Sul</p>
+              <ul>
+                <li>AVA para o projeto Cruzando Fronteiras. Construção, customização e configuração do Moodle para
+                  oferta de cursos e acompanhamento dos participantes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 · CURRÍCULO ============ -->
     <section class="ch ch--forest" id="cap2" data-sc-act="flow">
       <div class="ch__inner">
-        <div class="intertitle"><span class="intertitle__n">02</span>
+        <div class="intertitle"><span class="intertitle__n">05</span>
           <h2 class="intertitle__t">Currículo</h2>
         </div>
       </div>
@@ -1128,9 +1396,6 @@
             web à integração de inteligência artificial em sistemas de gestão. Atuo no SENAI Bahia desenvolvendo
             sistemas em PHP, JavaScript, MySQL e APIs REST, com IA integrada pela OpenAI API, além da administração,
             customização e evolução de plataformas Moodle.</p>
-          <p>Tenho experiência na criação de jogos e simuladores educacionais com Adobe Animate, HTML5 e JavaScript, bem
-            como na implementação de ambientes de aprendizagem para instituições nacionais e internacionais, incluindo
-            projetos desenvolvidos em parceria com a OEI, universidades e órgãos governamentais.</p>
         </div>
 
         <div class="record" data-sc-in data-sc-stagger="50">
@@ -1165,241 +1430,49 @@
       </div>
     </section>
 
-    <!-- ============ 03 · TAGS — reveal · o capítulo silencioso ============ -->
-    <section class="ch ch--paper2" id="cap3">
+    <!-- ============ 06 · TAGS ============ -->
+    <section class="ch ch--paper" id="cap3">
       <div class="ch__inner">
-        <div class="intertitle"><span class="intertitle__n">03</span>
+        <div class="intertitle"><span class="intertitle__n">06</span>
           <h2 class="intertitle__t">Tags</h2>
         </div>
       </div>
       <div class="ch__inner" style="padding-bottom:clamp(4rem,9vw,7rem)">
         <div class="lichen">
           <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.02 0.3">
-            <span class="lichen__k">LMS &amp; EAD</span>
-            <div class="lichen__items" data-stagger-items><span>Moodle</span><span>Administração de
-                LMS</span><span>Plugins Moodle</span><span>Temas Moodle</span><span>SCORM</span><span>Migração de
-                versão</span><span>Relatórios e BI do LMS</span><span>Educação a Distância</span></div>
-          </div>
-          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.12 0.4">
             <span class="lichen__k">Backend</span>
             <div class="lichen__items" data-stagger-items><span>PHP</span><span>MySQL</span><span>REST
                 API</span><span>Integrações de sistemas</span></div>
           </div>
-          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.22 0.5">
+          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.12 0.4">
             <span class="lichen__k">Frontend</span>
             <div class="lichen__items" data-stagger-items>
               <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Adobe Animate</span><span>CreateJS</span>
             </div>
           </div>
-          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.32 0.6">
+          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.22 0.5">
             <span class="lichen__k">IA aplicada</span>
             <div class="lichen__items" data-stagger-items><span>OpenAI API</span><span>Responses
                 API</span><span>Structured output</span><span>Streaming SSE</span><span>Engenharia de
                 prompt</span><span>Geração de imagem</span><span>Controle de custo de IA</span><span>n8n</span></div>
           </div>
-          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.42 0.7">
+          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.32 0.6">
             <span class="lichen__k">Dev assistido</span>
             <div class="lichen__items" data-stagger-items><span>Claude Code</span><span>MCP</span><span>Skills e
                 hooks</span><span>Spec-driven development</span><span>Grafo de código</span><span>Revisão assistida por
                 IA</span></div>
           </div>
-          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.52 0.8">
+          <div class="lichen__group" data-sc-reveal="up" data-sc-reveal-at="0.42 0.7">
             <span class="lichen__k">Processo &amp; automação</span>
             <div class="lichen__items" data-stagger-items><span>Gestão de projetos com
-                IA</span><span>Automação</span><span>Agentes de IA</span><span>Pesquisa</span><span>Resolução de
-                problemas</span></div>
+                IA</span><span>Automação</span><span>Agentes de IA</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 04 · PROJETOS — PICO · pin + parallax ============ -->
-    <section class="ch ch--deep" id="cap4" data-sc-act="pin" data-sc-span="3.4" data-sc-dwell="0.1">
-      <div data-sc-stage>
-        <div class="ch__inner peak">
-          <div data-sc-cue="0 1 0">
-            <p class="peak__kicker">04 · Produto digital em destaque</p>
-            <h3>FLOW</h3>
-            <p>Produto digital que conduz o fluxo de produção de conteúdo, do plano de aula à entrega final. Tem IA
-              integrada ao próprio processo: um assistente dentro do editor e a revisão ortográfica assistida. Exporta
-              em SCORM, PDF, DOCX e IDML.</p>
-           
-            <div class="peak__tags"><span>PHP 8.2</span><span>MySQL</span><span>JavaScript</span><span>OpenAI
-                API</span><span>SCORM 1.2</span></div>
-            <a class="peak__link" href="flow/index.html">Ver o case completo →</a>
-          </div>
-          <div>
-            <div class="planes">
-              <img class="planes__back" data-sc-parallax="-0.46" src="assets/flow/editor-secoes.jpg" width="1600"
-                height="1000" alt="Editor de aulas do FLOW com os blocos da estrutura e o painel de tipos de seção"
-                loading="lazy">
-              <img class="planes__mid" data-sc-parallax="-0.28" src="assets/flow/fluxo-status.jpg" width="1600"
-                height="1000" alt="Lista de aulas de uma unidade curricular, com o perfil responsável por cada uma"
-                loading="lazy">
-              <img class="planes__front" data-sc-parallax="-0.12" src="assets/flow/minhas-aulas.jpg" width="1600"
-                height="1000" alt="Tela Minhas Aulas do FLOW, a fila de aulas do usuário em cards" loading="lazy">
-              <span class="planes__floor" aria-hidden="true"></span>
-            </div>
-            <p class="planes__cap">FLOW, ambiente de demonstração. SENAI Bahia.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 05 · SENAI CLASS — pan (trilho lateral) ============ -->
-    <section class="ch ch--forest" id="cap5" data-sc-act="pan" data-sc-span="2.5">
-      <div data-sc-stage>
-        <div class="rail" data-sc-pan="0.04" data-stagger-items>
-          <div class="rail__lead">
-            <p class="peak__kicker">05 · Produto digital</p>
-            <h3 class="rail__title">SENAI&nbsp;Class</h3>
-            <p>Produto digital para o professor levar atividade gamificada para a sala: quiz, situação de aprendizagem e
-              aula interativa, com ranking e histórico. A IA gera as questões e o material, corrige respostas abertas e
-              sugere o feedback; quem decide é o professor.</p>
-            <div class="peak__tags"><span>PHP</span><span>MySQL</span><span>OpenAI API</span><span>Entra ID</span></div>
-            <a class="peak__link" href="ia/index.html#senaiclass">Ver o trabalho com IA →</a>
-          </div>
-
-          <figure class="rail__card">
-            <img src="assets/senaiclass/login.jpg" width="1400" height="1044"
-              alt="Tela de entrada do SENAI Class, com acesso institucional para o professor e entrada por PIN para o aluno"
-              loading="lazy">
-            <figcaption><b>Duas portas.</b> O professor entra pela conta institucional; o aluno entra só com o PIN da
-              sala.</figcaption>
-          </figure>
-
-          <figure class="rail__card">
-            <img src="assets/senaiclass/recursos.jpg" width="1400" height="1049"
-              alt="Tela Meus Recursos do SENAI Class, com cards de quiz e de aula interativa criados pelo professor"
-              loading="lazy">
-            <figcaption><b>Os recursos do professor.</b> Quiz, revisão e aula interativa, cada um com turma e contagem
-              de questões.</figcaption>
-          </figure>
-
-          <figure class="rail__card">
-            <img src="assets/senaiclass/ia-criando.jpg" width="1400" height="1048"
-              alt="Modal do SENAI Class com a mensagem Criando a situação de aprendizagem, enquanto a IA monta o material"
-              loading="lazy">
-            <figcaption><b>A IA propõe.</b> O professor dá o tema e a IA monta a situação de aprendizagem inteira. O
-              aviso é explícito: dá para revisar tudo antes de salvar.</figcaption>
-          </figure>
-
-          <figure class="rail__card">
-            <img src="assets/senaiclass/sa-capa.jpg" width="1400" height="1041"
-              alt="Slide de abertura de uma situação de aprendizagem gerada, com fotografia em tela cheia e o título Utilização de IA"
-              loading="lazy">
-            <figcaption><b>O resultado, em tela cheia.</b> A situação de aprendizagem abre como uma apresentação, pronta
-              para o projetor.</figcaption>
-          </figure>
-
-          <figure class="rail__card">
-            <img src="assets/senaiclass/sa-contexto.jpg" width="1400" height="1044"
-              alt="Slide de contexto de uma situação de aprendizagem gerada, com texto sobre uso de IA em um almoxarifado e imagem de apoio"
-              loading="lazy">
-            <figcaption><b>E uma pessoa decide.</b> Contexto, imagem e a pergunta que abre a discussão. O professor
-              revisa antes de projetar.</figcaption>
-          </figure>
-
-          <figure class="rail__card">
-            <img src="assets/senaiclass/sala.jpg" width="1400" height="1046"
-              alt="Sala de espera do SENAI Class, com PIN e QR code para os alunos entrarem na atividade"
-              loading="lazy">
-            <figcaption><b>A sala abre.</b> PIN e QR na tela, a turma entra pelo celular e quem chega depois ainda
-              alcança.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 06 · AMBIENTES MOODLE — reveal ============ -->
-    <section class="ch ch--forest" id="cap6">
-      <div class="ch__inner">
-        <div class="intertitle"><span class="intertitle__n">06</span>
-          <h2 class="intertitle__t">Ambientes Moodle</h2>
-        </div>
-      </div>
-      <div class="ch__inner" style="padding-bottom:clamp(4rem,9vw,7rem)">
-        <div class="strata" data-sc-in data-sc-stagger="70">
-          <div class="stratum stratum--wide">
-            <span class="stratum__when">SENAI Bahia</span>
-            <div>
-              <h3>AVA do SENAI Bahia</h3>
-              <p class="stratum__where">Oferta EAD do SENAI Bahia, desde 2015</p>
-              <ul>
-                <li>O Moodle onde os cursos a distância do SENAI Bahia são ofertados. Em operação desde 2015, hoje com
-                  <b>145 mil alunos cadastrados</b> e centenas de cursos no ar. É também o destino dos pacotes SCORM que
-                  saem do FLOW.</li>
-              </ul>
-              <div class="shotrow">
-                <figure class="shotpair">
-                  <img src="assets/moodle-prints/senai-entrada.jpg" width="1100" height="627"
-                    alt="Tela de entrada do AVA do SENAI, com o formulário de acesso e um vídeo explicando como entrar na plataforma"
-                    loading="lazy">
-                  <figcaption>A entrada, com o tutorial de primeiro acesso ao lado do login.</figcaption>
-                </figure>
-                <figure class="shotpair">
-                  <img src="assets/moodle-prints/senai-painel.jpg" width="1400" height="797"
-                    alt="Painel do Moodle do SENAI Bahia, com acesso rápido, próximas atividades, visão geral e calendário"
-                    loading="lazy">
-                  <figcaption>O painel do aluno, com acesso rápido, atividades e calendário.</figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-
-          <div class="stratum stratum--wide">
-            <span class="stratum__when">CNPq · IILP</span>
-            <div>
-              <h3>ObsPLE-PL2</h3>
-              <p class="stratum__where">Observatório de Português como Língua Estrangeira</p>
-              <ul>
-                <li>Ambiente Virtual de Aprendizagem para uma rede internacional vinculada ao CNPq e ao IILP/CPLP.
-                  Personalização do Moodle, diagramação dos conteúdos e melhorias de navegação. Quatro edições do curso, com mais de mil alunos.</li>
-              </ul>
-              <div class="shotrow">
-                <figure class="shotpair">
-                  <img src="assets/moodle-prints/obsple-entrada.jpg" width="1400" height="796"
-                    alt="Página de entrada do Observatório de Português Língua Estrangeira, com acesso à plataforma e os blocos de apresentação do curso"
-                    loading="lazy">
-                  <figcaption>A entrada, com o acesso e a apresentação do curso.</figcaption>
-                </figure>
-                <figure class="shotpair">
-                  <img src="assets/moodle-prints/obsple-cursos.jpg" width="1100" height="633"
-                    alt="Lista de cursos do Observatório PLE-PL2, com as edições do curso Português Pluricêntrico em cartões coloridos"
-                    loading="lazy">
-                  <figcaption>As edições do Português Pluricêntrico, cada uma com seu ambiente.</figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="stratum">
-            <span class="stratum__when">MJ · OEI</span>
-            <div>
-              <h3>Projeto (Re)Integro</h3>
-              <p class="stratum__where">Ministério da Justiça e OEI</p>
-              <ul>
-                <li>AVA para ações de formação e reintegração social. Construção e configuração da plataforma Moodle e
-                  organização do ambiente educacional.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="stratum">
-            <span class="stratum__when">UFRGS · OEI</span>
-            <div>
-              <h3>Cruzando Fronteiras</h3>
-              <p class="stratum__where">Universidade Federal do Rio Grande do Sul</p>
-              <ul>
-                <li>AVA para o projeto Cruzando Fronteiras. Construção, customização e configuração do Moodle para
-                  oferta de cursos e acompanhamento dos participantes.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 05 · EXPERIÊNCIA — flow + in ============ -->
-    <section class="ch ch--paper" id="cap7">
+    <!-- ============ 07 · EXPERIÊNCIA ============ -->
+    <section class="ch ch--paper2" id="cap7">
       <div class="ch__inner">
         <div class="intertitle"><span class="intertitle__n">07</span>
           <h2 class="intertitle__t">Experiência</h2>
@@ -1443,15 +1516,12 @@
       </div>
     </section>
 
-    <!-- ============ 06 · CONTATO — colofão · reveal ============ -->
+    <!-- ============ 08 · CONTATO ============ -->
     <section class="ch ch--moss" id="cap8">
       <div class="ch__inner colophon">
         <div data-sc-reveal="up" data-sc-reveal-at="0.02 0.4">
           <p class="intertitle__n" style="margin-bottom:1.5rem">08 · Contato</p>
-          <p class="colophon__ask">Disponível para projetos de produtos digitais, integração de IA com sistemas de
-            gestão e automação. O caminho mais curto é
-            <a href="mailto:ambrosipaulo@gmail.com">ambrosipaulo@gmail.com</a>.
-          </p>
+          <p class="colophon__ask">Disponível para projetos de produtos digitais e integração de IA com sistemas de gestão e automação. Conte o que você precisa resolver; respondo em até um dia útil.</p>
         </div>
         <div class="colophon__grid" data-sc-in data-sc-stagger="60">
           <div>
@@ -1466,7 +1536,7 @@
               target="_blank">@pauloambrosi</a>
           </div>
           <div>
-            <p class="colophon__k">Local</p><a href="#cap1">Salvador, Bahia, Brasil</a>
+            <p class="colophon__k">Local</p><p>Salvador, Bahia, Brasil</p>
           </div>
         </div>
         <div class="colophon__foot">
@@ -1531,7 +1601,83 @@
 }
 </script>
 
-  <script src="scrollcraft.js?v=20261106"></script>
+  <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada"><button class="lightbox__close" type="button">Fechar</button><img alt="" width="1600" height="1000"></dialog>
+<script>
+/* No celular (mesmo limite do motor, 860px) o FLOW deixa de ser fixo e o SENAI
+   Class vira uma linha que se desliza com o dedo. Roda antes do motor ler os atos. */
+(function () {
+  if (!window.matchMedia('(max-width: 860px)').matches) return;
+  var flow = document.getElementById('cap4');
+  if (flow) {
+    flow.setAttribute('data-sc-act', 'flow');
+    flow.removeAttribute('data-sc-span');
+    flow.removeAttribute('data-sc-dwell');
+    Array.prototype.forEach.call(flow.querySelectorAll('[data-sc-parallax]'), function (el) { el.removeAttribute('data-sc-parallax'); });
+  }
+  var sc = document.getElementById('cap5');
+  if (sc) {
+    sc.setAttribute('data-sc-act', 'flow');
+    sc.removeAttribute('data-sc-span');
+    var rail = sc.querySelector('[data-sc-pan]');
+    if (rail) { rail.removeAttribute('data-sc-pan'); rail.classList.add('rail--swipe'); }
+  }
+}());
+</script>
+<script src="scrollcraft.js?v=20261106"></script>
+<script>
+/* capturas ampliadas num <dialog>; sem JS o link abre a imagem */
+(function () {
+  var box = document.getElementById('lightbox');
+  if (!box || typeof box.showModal !== 'function') return;
+  var img = box.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.zoom');
+    if (!a) return;
+    e.preventDefault();
+    var src = a.querySelector('img');
+    img.src = a.getAttribute('href');
+    img.alt = src ? src.alt : '';
+    box.showModal();
+  });
+  box.addEventListener('click', function (e) {
+    if (e.target === box || e.target.closest('.lightbox__close')) box.close();
+  });
+  box.addEventListener('close', function () { img.removeAttribute('src'); });
+}());
+</script>
+<script>
+/* tema (mesma chave das páginas internas) e cabeçalho que some ao descer */
+(function () {
+  var root = document.documentElement, btn = document.getElementById('theme-toggle');
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark() { var a = root.getAttribute('data-theme'); return a ? a === 'dark' : mq.matches; }
+  function sync() { if (btn) btn.setAttribute('aria-pressed', String(isDark())); }
+  if (btn) {
+    sync();
+    btn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('pa-theme', next); } catch (e) { /* modo privado */ }
+      sync();
+    });
+    mq.addEventListener('change', sync);
+  }
+  var head = document.getElementById('masthead');
+  if (!head) return;
+  var last = window.scrollY, ticking = false;
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      var y = window.scrollY;
+      if (Math.abs(y - last) > 4) head.classList.toggle('is-hidden', y > last && y > 120);
+      last = y;
+      ticking = false;
+    });
+  }, { passive: true });
+  head.addEventListener('focusin', function () { head.classList.remove('is-hidden'); });
+}());
+</script>
   <script>ScrollCraft.mount(document.body);</script>
   <script>
     /* --- signature move: a passada do revisor ------------------------- */
