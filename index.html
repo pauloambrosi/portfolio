@@ -260,16 +260,6 @@
       color: var(--sc-ink);
     }
 
-    .plate__role {
-      display: block;
-      margin-bottom: .95rem;
-      font-family: var(--sc-font-mono);
-      font-size: .8rem;
-      font-weight: 500;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--sc-accent);
-    }
 
     /* Frase que se escreve e se apaga. A altura e reservada pela maior frase
    (medida em JS), senao o resto do herói pula a cada troca de linha. */
@@ -1157,6 +1147,10 @@ h1, h2, h3 { text-wrap: balance; }
 .colophon__grid a { display: inline-block; padding-block: .65rem; border-bottom: 0; text-decoration: underline; text-decoration-color: rgba(255, 255, 255, .3); text-decoration-thickness: 1px; text-underline-offset: .3em; }
 .colophon__grid a:hover { text-decoration-color: currentColor; }
 .colophon__k { margin-bottom: 0; }
+
+/* --- oferta fixa: a promessa não depende da frase que se apaga ------ */
+.plate__offer { display: block; max-width: 24ch; margin: 0 0 clamp(1rem, 2.4vw, 1.4rem); font-family: var(--sc-font-display); font-weight: 500; font-size: clamp(1.65rem, 1.05rem + 2.3vw, 2.75rem); line-height: 1.14; letter-spacing: .002em; color: var(--sc-ink); text-wrap: balance; font-variation-settings: "SOFT" 0, "WONK" 0; }
+.typer { font-family: var(--sc-font-text); font-weight: 400; font-size: clamp(1.05rem, .95rem + .5vw, 1.3rem); line-height: 1.5; color: var(--sc-ink-soft); }
 </style>
 </head>
 
@@ -1186,7 +1180,7 @@ h1, h2, h3 { text-wrap: balance; }
       <div class="ch__inner plate" data-sc-in data-sc-stagger="70">
         <h1 class="plate__name" data-sc-parallax="-0.08">Paulo Ambrosi</h1>
         <p class="plate__claim">
-          <span class="plate__role">Produtos digitais e soluções com IA</span>
+          <span class="plate__offer">Produtos digitais e soluções com IA, do banco de dados à implantação.</span>
           <span class="typer" data-typer aria-hidden="true"
             data-phrases="Construo, implemento e testo produtos digitais.|Integro inteligência artificial a sistemas de gestão e automação.|Automatizo processos com agentes de IA.|Desenho IA que propõe e uma pessoa decide."><span
               class="typer__text">Construo, implemento e testo produtos digitais.</span><span
@@ -1817,7 +1811,7 @@ h1, h2, h3 { text-wrap: balance; }
       }
 
       var TYPE_MS = 30, TYPE_JITTER = 12, ERASE_MS = 16, ERASE_STEP = 2;
-      var HOLD_MS = 1600, GAP_MS = 240, START_MS = 800;
+      var HOLD_MS = 3200, GAP_MS = 240, START_MS = 800;
 
       /* reserva a altura da maior frase */
       function reserve() {
@@ -1834,30 +1828,37 @@ h1, h2, h3 { text-wrap: balance; }
         new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: 0 }).observe(host);
       }
 
-      var i = 0, n = 0, mode = 'type', timer = null;
+      var i = 0, n = 0, mode = 'type', timer = null, cycled = false, held = false;
+  host.addEventListener('pointerenter', function () { held = true; });
+  host.addEventListener('pointerleave', function () { held = false; });
       function later(ms) { timer = window.setTimeout(step, ms); }
       function step() {
         // pausa fora da tela e com a aba em segundo plano
-        if (!visible || document.hidden) { later(400); return; }
+        if (!visible || document.hidden || held) { later(400); return; }
         var p = phrases[i];
         if (mode === 'type') {
           host.classList.add('is-moving');
           n += 1;
           out.textContent = p.slice(0, n);
-          if (n >= p.length) { mode = 'erase'; host.classList.remove('is-moving'); later(HOLD_MS); return; }
+          if (n >= p.length) {
+        host.classList.remove('is-moving');
+        // depois de mostrar todas, volta à primeira e para
+        if (cycled && i === 0) { host.classList.add('is-static'); return; }
+        mode = 'erase'; later(HOLD_MS); return;
+      }
           later(TYPE_MS + Math.round(Math.random() * TYPE_JITTER));
         } else {
           host.classList.add('is-moving');
           n = Math.max(0, n - ERASE_STEP);
           out.textContent = p.slice(0, n);
-          if (n === 0) { mode = 'type'; i = (i + 1) % phrases.length; later(GAP_MS); return; }
+          if (n === 0) { mode = 'type'; i = (i + 1) % phrases.length; if (i === 0) cycled = true; later(GAP_MS); return; }
           later(ERASE_MS);
         }
       }
 
-      out.textContent = '';
+      out.textContent = phrases[0]; n = phrases[0].length; mode = 'erase';
       var ready = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
-      ready.then(function () { reserve(); later(START_MS); });
+      ready.then(function () { reserve(); later(HOLD_MS); });
 
       var rz = null;
       window.addEventListener('resize', function () {
