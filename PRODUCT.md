@@ -48,7 +48,7 @@ Emphasis order, decided 2026-11-06: digital products and AI solutions come first
 
 ## Evidence on Hand
 
-- Biography, experience, education, and projects come from the `pauloambrosi/cv` repo (pt-BR `index.html`, en `en.html`). 12+ years of experience at SENAI CETIND.
+- Biography, experience, education, and projects come from the `pauloambrosi/cv` repo (pt-BR `index.html`, en `en.html`). 12+ years of experience at SENAI Bahia.
 - FLOW case: drawn from the system's README. Screenshots are in `assets/flow/` and come from a demo environment ("Ana Conteudista (demo)", "UC-DEMO").
 - SENAI Class: screenshots are in `assets/senaiclass/`.
 - AI page (`ia/`): taken directly from the FLOW and SENAI Class code. Assistant over SSE, assisted proofreading with a diff, personalized assessment, question generation, open-answer grading reviewed by the teacher, image generation. Plus his own AI-assisted development setup (`CLAUDE.md` files, code graph, spec-driven development, hooks).

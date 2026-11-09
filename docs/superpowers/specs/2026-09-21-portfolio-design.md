@@ -63,7 +63,7 @@ usuário: evitar spam).
    LMS & EAD · Backend · Frontend · Automação & IA · Dados.
 4. **Projetos** — card de destaque do FLOW + 3 cards de AVA, com tags de
    tecnologia; links para as páginas de case.
-5. **Experiência** — timeline SENAI CETIND (Analista 2022– · Programador 2015–2022 ·
+5. **Experiência** — timeline SENAI Bahia (Analista 2022– · Programador 2015–2022 ·
    Estagiário 2013–2015) + formação (UNIFACS, SENAI Bahia).
 6. **Contato** — e-mail, LinkedIn, GitHub, localização.
 
